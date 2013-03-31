@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+** 代码制作人 : luhf
+** 制作时间 : 2013-03-31 18:19:00
+** 文件内容描述 : 网页主要reset样式
+** 涉及区域(1) : 页面整体reset样式
+*********************************************/
+/* 描述网页 */
+html {
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #111111;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0;
+}
+/* 表格 */
+table {
+	border-collapse:collapse;/* 边框合并为一个单一的边框 */
+	border-spacing:0;/* 相邻单元格的边框间的距离 */
+}
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,i,strong,th,var,optgroup {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+/* 缩略词语,首字母缩写*/
+abbr,acronym {
+	border:0;
+	font-variant: normal;
+}
+/* 上标文本 */
+sup { vertical-align: baseline; }
+/* 下标文本 */
+sub { vertical-align: baseline; }
+/* fieldset元素定义标题 */
+legend { color: #000000; }
+input, button, textarea, select, optgroup, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+/* 预格式化的文本 */
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+/* 超链接 */
+a { cursor: pointer; }
+/* 未访问的链接 */
+a:link {
+	color: #3377AA;
+	text-decoration: none;
+}
+/* 已访问的链接 */
+a:visited {
+	color: #666699;
+	text-decoration: none;
+}
+/* 当有鼠标悬停在链接上 */
+a:hover { text-decoration: underline; }
+/* 被选择的链接 */
+a:active {
+	background: none repeat scroll 0 0 #FF9933;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* 查链接图片 */
+a img {
+	border-width: 0;
+	vertical-align: middle;
+}
+/* 可见的页面内容 */
+body{ font: 12px/1.62 Helvetica,Arial,sans-serif; }
+/* 清除浮动 */
+.clearfix { *zoom:1; }
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+/* 左浮动 */
+.fl { float: left; }
+/* 右浮动 */
+.fr { float: right; }
+/* 显示 */
+.dis { display:block; }
+/* 隐藏 */
+.undis { display:none; }

@@ -1,0 +1,8 @@
+package com.luhf.bean;
+
+import com.jfinal.plugin.activerecord.Model;
+
+@SuppressWarnings("serial")
+public class User extends Model<User>{
+	public static final User dao=new User();
+}
