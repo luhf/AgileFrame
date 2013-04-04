@@ -1,10 +1,10 @@
 <#include "./common/_header.html"/>
 <#include "./common/_footer.html"/>
 <@header title="${title}" keywords="${keywords}" description="${description}">
-<link media="screen" rel="stylesheet" type="text/css" href="/res/css/themes/default/easyui.css?ver=201303302336" id="swicth-style"/>
-<link media="screen" rel="stylesheet" type="text/css" href="/res/css/themes/icon.css?ver=201303302336" />
-<link media="screen" rel="stylesheet" type="text/css" href="/res/css/reset.css?ver=201303302336" />
-<link media="screen" rel="stylesheet" type="text/css" href="/res/css/main.css?ver=201303302336" />
+<link media="screen" rel="stylesheet" type="text/css" href="/res/css/themes/default/easyui.css" id="swicth-style"/>
+<link media="screen" rel="stylesheet" type="text/css" href="/res/css/themes/icon.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/res/css/reset.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="/res/css/main.css" />
 </@header>
 <div class="easyui-layout" fit="true">
 	<!-- 北 -->
@@ -21,77 +21,73 @@
 	<!-- 西 -->
 	<div region="west" border="true" split="false" class="cs-west" title="导航(Navigation)">
 		<div class="easyui-accordion" fit="true" border="false">
-				<div title="基础(Base)" selected="true">
-					<a href="javascript:void(0);" src="api/documentation.html" class="cs-navi-menu">documentation</a></p>
-					<a href="javascript:void(0);" src="api/parser.html" class="cs-navi-menu">parser(解析器)</a></p>
-					<a href="javascript:void(0);" src="api/easyloader.html" class="cs-navi-menu">easyloader(加载)</a></p>
-					<a href="javascript:void(0);" src="api/draggable.html" class="cs-navi-menu">draggable(拖动)</a></p>
-					<a href="javascript:void(0);" src="api/droppable.html" class="cs-navi-menu">droppable(放置)</a></p>
-					<a href="javascript:void(0);" src="api/resizable.html" class="cs-navi-menu">resizable(大小调整)</a></p>
-					<a href="javascript:void(0);" src="api/pagination.html" class="cs-navi-menu">pagination(分页)</a></p>
-					<a href="javascript:void(0);" src="api/searchbox.html" class="cs-navi-menu">searchbox(搜索框)</a></p>
-					<a href="javascript:void(0);" src="api/progressbar.html" class="cs-navi-menu">progressbar(进度条)</a></p>
-				</div>
-				<div title="(布局)Layout">
-					<a href="javascript:void(0);" src="api/panel.html" class="cs-navi-menu">panel(面板)</a></p>
-					<a href="javascript:void(0);" src="api/tabs.html" class="cs-navi-menu">tabs(选项卡)</a></p>
-					<a href="javascript:void(0);" src="api/accordion.html" class="cs-navi-menu">accordion(分类)</a></p>
-					<a href="javascript:void(0);" src="api/layout.html" class="cs-navi-menu">layout(布局)</a></p>
-				</div>
-				<div title="(菜单按钮)Menu and Button">
-					<a href="javascript:void(0);" src="api/menu.html" class="cs-navi-menu">menu(菜单)</a></p>
-					<a href="javascript:void(0);" src="api/menubutton.html" class="cs-navi-menu">menubutton(按钮)</a></p>
-					<a href="javascript:void(0);" src="api/linkbutton.html" class="cs-navi-menu">linkbutton(菜单按钮)</a></p>
-					<a href="javascript:void(0);" src="api/splitbutton.html" class="cs-navi-menu">splitbutton(分割按钮)</a></p>
-				</div>
-				<div title="(表单)Form">
-					<a href="javascript:void(0);" src="api/form.html" class="cs-navi-menu">form(表单)</a></p>
-					<a href="javascript:void(0);" src="api/validatebox.html" class="cs-navi-menu">validatebox(验证框)</a></p>
-					<a href="javascript:void(0);" src="api/combo.html" class="cs-navi-menu">combo(组合)</a></p>
-					<a href="javascript:void(0);" src="api/combobox.html" class="cs-navi-menu">combobox(组合框)</a></p>
-					<a href="javascript:void(0);" src="api/combotree.html" class="cs-navi-menu">combotree(树形组合框)</a></p>
-					<a href="javascript:void(0);" src="api/combogrid.html" class="cs-navi-menu">combogrid(数据组合框)</a></p>
-					<a href="javascript:void(0);" src="api/numberbox.html" class="cs-navi-menu">numberbox(数字框)</a></p>
-					<a href="javascript:void(0);" src="api/datebox.html" class="cs-navi-menu">datebox(时间框)</a></p>
-					<a href="javascript:void(0);" src="api/datetimebox.html" class="cs-navi-menu">datetimebox(日期框)</a></p>
-					<a href="javascript:void(0);" src="api/calendar.html" class="cs-navi-menu">calendar(日历)</a></p>
-					<a href="javascript:void(0);" src="api/spinner.html" class="cs-navi-menu">spinner(微调)</a></p>
-					<a href="javascript:void(0);" src="api/timespinner.html" class="cs-navi-menu">timespinner(时间微调)</a></p>
-					<a href="javascript:void(0);" src="api/numberspinner.html" class="cs-navi-menu">numberspinner(数字微调)</a></p>
-					<a href="javascript:void(0);" src="api/slider.html" class="cs-navi-menu">slider(滑动条)</a></p>
-				</div>
-				<div title="(窗口)Window">
-					<a href="javascript:void(0);" src="api/window.html" class="cs-navi-menu">window(窗口)</a></p>
-					<a href="javascript:void(0);" src="api/dialog.html" class="cs-navi-menu">dialog(对话窗口)</a></p>
-					<a href="javascript:void(0);" src="api/messager.html" class="cs-navi-menu">messager(提示窗口)</a></p>
-				</div>
-				<div title="(表格和树)DataGrid and Tree">
-					<a href="javascript:void(0);" src="api/datagrid.html" class="cs-navi-menu">datagrid(数据表格)</a></p>
-					<a href="javascript:void(0);" src="api/propertygrid.html" class="cs-navi-menu">propertygrid(属性表格)</a></p>
-					<a href="javascript:void(0);" src="api/tree.html" class="cs-navi-menu">tree(树)</a></p>
-					<a href="javascript:void(0);" src="api/treegrid.html" class="cs-navi-menu">treegrid(树形表格)</a></p>
-				</div>
+			<div title="基础(Base)" selected="true">
+				<a href="javascript:void(0);" src="api/documentation.html" class="cs-navi-menu">documentation</a></p>
+				<a href="javascript:void(0);" src="api/parser.html" class="cs-navi-menu">parser(解析器)</a></p>
+				<a href="javascript:void(0);" src="api/easyloader.html" class="cs-navi-menu">easyloader(加载)</a></p>
+				<a href="javascript:void(0);" src="api/draggable.html" class="cs-navi-menu">draggable(拖动)</a></p>
+				<a href="javascript:void(0);" src="api/droppable.html" class="cs-navi-menu">droppable(放置)</a></p>
+				<a href="javascript:void(0);" src="api/resizable.html" class="cs-navi-menu">resizable(大小调整)</a></p>
+				<a href="javascript:void(0);" src="api/pagination.html" class="cs-navi-menu">pagination(分页)</a></p>
+				<a href="javascript:void(0);" src="api/searchbox.html" class="cs-navi-menu">searchbox(搜索框)</a></p>
+				<a href="javascript:void(0);" src="api/progressbar.html" class="cs-navi-menu">progressbar(进度条)</a></p>
+			</div>
+			<div title="(布局)Layout">
+				<a href="javascript:void(0);" src="api/panel.html" class="cs-navi-menu">panel(面板)</a></p>
+				<a href="javascript:void(0);" src="api/tabs.html" class="cs-navi-menu">tabs(选项卡)</a></p>
+				<a href="javascript:void(0);" src="api/accordion.html" class="cs-navi-menu">accordion(分类)</a></p>
+				<a href="javascript:void(0);" src="api/layout.html" class="cs-navi-menu">layout(布局)</a></p>
+			</div>
+			<div title="(菜单按钮)Menu and Button">
+				<a href="javascript:void(0);" src="api/menu.html" class="cs-navi-menu">menu(菜单)</a></p>
+				<a href="javascript:void(0);" src="api/menubutton.html" class="cs-navi-menu">menubutton(按钮)</a></p>
+				<a href="javascript:void(0);" src="api/linkbutton.html" class="cs-navi-menu">linkbutton(菜单按钮)</a></p>
+				<a href="javascript:void(0);" src="api/splitbutton.html" class="cs-navi-menu">splitbutton(分割按钮)</a></p>
+			</div>
+			<div title="(表单)Form">
+				<a href="javascript:void(0);" src="api/form.html" class="cs-navi-menu">form(表单)</a></p>
+				<a href="javascript:void(0);" src="api/validatebox.html" class="cs-navi-menu">validatebox(验证框)</a></p>
+				<a href="javascript:void(0);" src="api/combo.html" class="cs-navi-menu">combo(组合)</a></p>
+				<a href="javascript:void(0);" src="api/combobox.html" class="cs-navi-menu">combobox(组合框)</a></p>
+				<a href="javascript:void(0);" src="api/combotree.html" class="cs-navi-menu">combotree(树形组合框)</a></p>
+				<a href="javascript:void(0);" src="api/combogrid.html" class="cs-navi-menu">combogrid(数据组合框)</a></p>
+				<a href="javascript:void(0);" src="api/numberbox.html" class="cs-navi-menu">numberbox(数字框)</a></p>
+				<a href="javascript:void(0);" src="api/datebox.html" class="cs-navi-menu">datebox(时间框)</a></p>
+				<a href="javascript:void(0);" src="api/datetimebox.html" class="cs-navi-menu">datetimebox(日期框)</a></p>
+				<a href="javascript:void(0);" src="api/calendar.html" class="cs-navi-menu">calendar(日历)</a></p>
+				<a href="javascript:void(0);" src="api/spinner.html" class="cs-navi-menu">spinner(微调)</a></p>
+				<a href="javascript:void(0);" src="api/timespinner.html" class="cs-navi-menu">timespinner(时间微调)</a></p>
+				<a href="javascript:void(0);" src="api/numberspinner.html" class="cs-navi-menu">numberspinner(数字微调)</a></p>
+				<a href="javascript:void(0);" src="api/slider.html" class="cs-navi-menu">slider(滑动条)</a></p>
+			</div>
+			<div title="(窗口)Window">
+				<a href="javascript:void(0);" src="api/window.html" class="cs-navi-menu">window(窗口)</a></p>
+				<a href="javascript:void(0);" src="api/dialog.html" class="cs-navi-menu">dialog(对话窗口)</a></p>
+				<a href="javascript:void(0);" src="api/messager.html" class="cs-navi-menu">messager(提示窗口)</a></p>
+			</div>
+			<div title="(表格和树)DataGrid and Tree">
+				<a href="javascript:void(0);" src="api/datagrid.html" class="cs-navi-menu">datagrid(数据表格)</a></p>
+				<a href="javascript:void(0);" src="api/propertygrid.html" class="cs-navi-menu">propertygrid(属性表格)</a></p>
+				<a href="javascript:void(0);" src="api/tree.html" class="cs-navi-menu">tree(树)</a></p>
+				<a href="javascript:void(0);" src="api/treegrid.html" class="cs-navi-menu">treegrid(树形表格)</a></p>
+			</div>
 		</div>
 	</div>
 	<!-- 中 -->
 	<div region="center" id="mainPanle" border="true" split="false">
 		<div id="tabs" class="easyui-tabs"  fit="true" border="false" >
-				<div title="首页(Home)">
-					<div class="cs-home-remark">
-						<h1>jQuery EasyUI 1.3.2 API</h1> <br>
-						制作：luhf <br>
-						博客：<a href="http://my.oschina.net/luhaifeng/blog" target="_blank">http://my.oschina.net/luhaifeng/blog</a><br>
-						说明：jQuery EasyUI 1.3.2 API离线文档，与官网API文档一致。
-					</div>
+			<div title="首页(Home)">
+				<div class="cs-home-remark">
+					<h1>jQuery EasyUI 1.3.2 API</h1> <br>
+					制作：luhf <br>
+					博客：<a href="http://my.oschina.net/luhaifeng/blog" target="_blank">http://my.oschina.net/luhaifeng/blog</a><br>
+					说明：jQuery EasyUI 1.3.2 API离线文档，与官网API文档一致。
 				</div>
+			</div>
 		</div>
 	</div>
 	<!-- 西 -->
-	<div region="east" border="true" split="false" title="系统信息(SystemInfo)" class="cs-east">
-		<div class="easyui-propertygrid">
-			
-		</div>
-	</div>
+	<div region="east" border="true" split="false" title="系统信息(SystemInfo)" class="cs-east"></div>
 	<!-- 南 -->
 	<div region="south" border="false" id="south"><center><a>@g.luhaifeng@gmail.com</a></center></div>
 	<!-- 右键关闭区域 -->
@@ -104,9 +100,9 @@
 	</div>
 </div>
 <@footer>
-<script type="text/javascript" src="/res/js/jquery-1.8.0.min.js?ver=201303302336"></script>
-<script type="text/javascript" src="/res/js/jquery-cookie.js?ver=201303302336"></script>
-<script type="text/javascript" src="/res/js/jquery.easyui.min.js?ver=201303302336"></script>
-<script type="text/javascript" src="/res/js/locale/easyui-lang-zh_CN.js?ver=201303302336"></script>
-<script type="text/javascript" src="/res/js/main.js?ver=201303302336"></script>
+<script type="text/javascript" src="/res/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/res/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/res/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/res/js/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="/res/js/base.js"></script>
 </@footer>
