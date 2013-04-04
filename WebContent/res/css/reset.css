@@ -20,84 +20,117 @@ table {
 	border-collapse:collapse;/* 边框合并为一个单一的边框 */
 	border-spacing:0;/* 相邻单元格的边框间的距离 */
 }
-fieldset,img { border:0; }
-address,caption,cite,code,dfn,em,i,strong,th,var,optgroup {
-	font-style:normal;
-	font-weight:normal;
+/* 表单分组,图像 */
+fieldset,img {
+	border:0;/* 边框的宽度 */
 }
-ol,ul { list-style:none; }
-caption,th { text-align:left; }
+address,caption,cite,code,dfn,em,i,strong,th,var,optgroup {
+	font-style:normal;/* 字体风格 */
+	font-weight:normal;/* 文本粗细 */
+}
+/* 有序列表,无序列表 */
+ol,ul {
+	list-style:none;/* 列表属性 */
+}
+/* 表格标题,表头单元格 */
+caption,th {
+	text-align:left;
+}
+/* 强调标题 */
 h1,h2,h3,h4,h5,h6 {
 	font-size:100%;
 	font-weight:normal;
 }
+/* 引用 */
 q:before,q:after {
 	content:'';
 }
 /* 缩略词语,首字母缩写*/
 abbr,acronym {
 	border:0;
-	font-variant: normal;
+	font-variant: normal;/* 字母大小写 */
 }
 /* 上标文本 */
-sup { vertical-align: baseline; }
+sup {
+	vertical-align: baseline;/* 垂直对齐 */
+}
 /* 下标文本 */
-sub { vertical-align: baseline; }
+sub {
+	vertical-align: baseline;/* 垂直对齐 */
+}
 /* fieldset元素定义标题 */
-legend { color: #000000; }
+legend {
+	color: #000000;
+}
 input, button, textarea, select, optgroup, option {
-	font-family: inherit;
-	font-size: inherit;
-	font-style: inherit;
-	font-weight: inherit;
+	font-family: inherit;/* 字体系列 */
+	font-size: inherit;/* 字体尺寸 */
+	font-style: inherit;/* 字体风格 */
+	font-weight: inherit;/* 文本粗细 */
 }
 /* 预格式化的文本 */
 pre {
-	white-space: pre-wrap;
-	word-wrap: break-word;
+	white-space: pre-wrap;/* 处理元素内的空白 */
+	word-wrap: break-word;/* 处理英文换行 */
 }
 /* 超链接 */
-a { cursor: pointer; }
+a {
+	cursor: pointer;/* 光标类型 */
+}
 /* 未访问的链接 */
 a:link {
 	color: #3377AA;
-	text-decoration: none;
+	text-decoration: none;/* 下划线 */
 }
 /* 已访问的链接 */
 a:visited {
 	color: #666699;
-	text-decoration: none;
+	text-decoration: none;/* 下划线 */
 }
 /* 当有鼠标悬停在链接上 */
-a:hover { text-decoration: underline; }
+a:hover {
+	text-decoration: underline;/* 下划线 */
+}
 /* 被选择的链接 */
 a:active {
 	background: none repeat scroll 0 0 #FF9933;
 	color: #FFFFFF;
-	text-decoration: none;
+	text-decoration: none;/* 下划线 */
 }
 /* 查链接图片 */
 a img {
-	border-width: 0;
-	vertical-align: middle;
+	border-width: 0;/* 边框宽度 */
+	vertical-align: middle;/* 垂直对齐方式 */
 }
 /* 可见的页面内容 */
-body{ font: 12px/1.62 Helvetica,Arial,sans-serif; }
+body{
+	font: 12px/1.62 Helvetica,Arial,sans-serif;
+}
 /* 清除浮动 */
-.clearfix { *zoom:1; }
+* html .clearfix {
+	zoom:1;
+}
 .clearfix:after {
-	clear: both;
+	clear: both;/* 左右两侧不允许浮动 */
 	content: ".";
-	display: block;
+	display: block;/* 元素显示 */
 	height: 0;
 	font-size: 0;
-	visibility: hidden;
+	visibility: hidden;/* 是否可见 */
 }
 /* 左浮动 */
-.fl { float: left; }
+.fl {
+	float: left;
+}
 /* 右浮动 */
-.fr { float: right; }
+.fr {
+	float: right;
+}
 /* 显示 */
-.dis { display:block; }
+.dis {
+	display:block;
+}
 /* 隐藏 */
-.undis { display:none; }
+.undis {
+	display:none;
+}
