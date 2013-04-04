@@ -1,16 +1,9 @@
 $(function() {
-	_AF.initPage();
+	_AF.nav.initNav();//初始化导航菜单
+	_AF.tabs.initTab();//绑定右键菜单事件
+	_AF.theme.initTheme();//初始化切换主题
 });
 var _AF={
-	
-	/**
-	 * 页面初始化
-	 */
-	initPage:function(){
-		_AF.nav.initNav();//初始化导航菜单
-		_AF.tabs.initTab();//绑定右键菜单事件
-		_AF.theme.initTheme();//初始化切换主题
-	},
 	
 	/**
 	 * cookie
