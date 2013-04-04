@@ -9,12 +9,23 @@
 ** 涉及区域(3) : 页脚样式
 ** 特殊说明 : 目前为区域效果,添加了区域背景色
 *********************************************/
+/* 西部 */
+.cs-west { width: 200px; }
+/* 西部-导航-菜单 */
+.cs-navi-menu { margin: 5px; }
+/* 东部 */
+.cs-east { width: 300px; }
+/* tab-右键菜单 */
+.cs-tab-menu { width: 120px; }
+/* 中部-首页备注 */
+.cs-home-remark { padding: 10px; }
 /* 北部 */
 .cs-north {
 	height: 35px;
 }
 /* 北部-logo */
 .cs-north-logo {
+	float: left;
 	height: 32px;
 	display: inline-block;
 	color: #000000;
@@ -22,29 +33,19 @@
 	font-weight: bold;
 	text-decoration: none
 }
-/* 西部 */
-.cs-west { width: 200px; }
-/* 西部-导航-菜单 */
-.cs-navi-menu { margin: 5px; }
-/* 东部 */
-.cs-east { width: 250px; }
-/* tab-右键菜单 */
-.cs-tab-menu { width: 120px; }
-/* 中部-首页备注 */
-.cs-home-remark { padding: 10px; }
 /* ui主题 -ul*/
 .ui-skin-nav {
 	float: right;
 	padding: 0;
-	margin-right: 10px;
+	margin: 10px 10px 0 0;
 	list-style: none outside none;
-	height: 30px;
+	height: 10px;
 }
 /* ui主题 -ul,li*/
 .ui-skin-nav .li-skinitem {
 	float: left;
 	font-size: 12px;
-	line-height: 30px;
+	line-height: 10px;
 	margin-left: 10px;
 	text-align: center;
 }
