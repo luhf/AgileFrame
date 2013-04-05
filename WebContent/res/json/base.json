@@ -1,1 +1,198 @@
-a
+{
+	"menus":[
+		{
+			"menuid" : "1",
+			"menuname" : "基础(Base)",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "documentation(文档)",
+					"url" : "api/documentation.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "parser(解析器)",
+					"url" : "api/parser.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "easyloader(加载)",
+					"url" : "api/easyloader.html"
+				} , {
+					"menuid" : "4",
+					"menuname" : "draggable(拖动)",
+					"url" : "api/draggable.html"
+				} , {
+					"menuid" : "5",
+					"menuname" : "droppable(放置)",
+					"url" : "api/droppable.html"
+				} , {
+					"menuid" : "6",
+					"menuname" : "resizable(大小调整)",
+					"url" : "api/resizable.html"
+				} , {
+					"menuid" : "7",
+					"menuname" : "pagination(分页)",
+					"url" : "api/pagination.html"
+				} , {
+					"menuid" : "8",
+					"menuname" : "searchbox(搜索框)",
+					"url" : "api/searchbox.html"
+				} , {
+					"menuid" : "9",
+					"menuname" : "progressbar(进度条)",
+					"url" : "api/progressbar.html"
+				}
+			]
+		},
+		{
+			"menuid" : "2",
+			"menuname" : "(布局)Layout",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "panel(面板)",
+					"url" : "api/panel.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "tabs(选项卡)",
+					"url" : "api/tabs.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "accordion(分类)",
+					"url" : "api/accordion.html"
+				} , {
+					"menuid" : "4",
+					"menuname" : "layout(布局)",
+					"url" : "api/layout.html"
+				}
+			]
+		},
+		{
+			"menuid" : "3",
+			"menuname" : "(菜单按钮)Menu and Button",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "menu(菜单)",
+					"url" : "api/menu.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "menubutton(按钮)",
+					"url" : "api/menubutton.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "linkbutton(菜单按钮)",
+					"url" : "api/linkbutton.html"
+				} , {
+					"menuid" : "4",
+					"menuname" : "splitbutton(分割按钮)",
+					"url" : "api/splitbutton.html"
+				}
+			]
+		},
+		{
+			"menuid" : "4",
+			"menuname" : "(表单)Form",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "form(表单)",
+					"url" : "api/form.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "validatebox(验证框)",
+					"url" : "api/validatebox.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "combo(组合)",
+					"url" : "api/combo.html"
+				} , {
+					"menuid" : "4",
+					"menuname" : "combobox(组合框)",
+					"url" : "api/combobox.html"
+				} , {
+					"menuid" : "5",
+					"menuname" : "combotree(树形组合框)",
+					"url" : "api/combotree.html"
+				} , {
+					"menuid" : "6",
+					"menuname" : "combogrid(数据组合框)",
+					"url" : "api/combogrid.html"
+				} , {
+					"menuid" : "7",
+					"menuname" : "numberbox(数字框)",
+					"url" : "api/numberbox.html"
+				} , {
+					"menuid" : "8",
+					"menuname" : "datebox(时间框)",
+					"url" : "api/datebox.html"
+				} , {
+					"menuid" : "9",
+					"menuname" : "datetimebox(日期框)",
+					"url" : "api/datetimebox.html"
+				} , {
+					"menuid" : "10",
+					"menuname" : "calendar(日历)",
+					"url" : "api/calendar.html"
+				} , {
+					"menuid" : "11",
+					"menuname" : "spinner(微调)",
+					"url" : "api/spinner.html"
+				} , {
+					"menuid" : "12",
+					"menuname" : "timespinner(时间微调)",
+					"url" : "api/timespinner.html"
+				} , {
+					"menuid" : "13",
+					"menuname" : "numberspinner(数字微调)",
+					"url" : "api/numberspinner.html"
+				} , {
+					"menuid" : "14",
+					"menuname" : "slider(滑动条)",
+					"url" : "api/slider.html"
+				}
+			]
+		},
+		{
+			"menuid" : "5",
+			"menuname" : "(窗口)Window",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "window(窗口)",
+					"url" : "api/window.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "dialog(对话窗口)",
+					"url" : "api/dialog.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "messager(提示窗口)",
+					"url" : "api/messager.html"
+				}
+			]
+		},
+		{
+			"menuid" : "6",
+			"menuname" : "(表格和树)DataGrid and Tree",
+			"menus" : [ 
+				{
+					"menuid" : "1",
+					"menuname" : "datagrid(数据表格)",
+					"url" : "api/datagrid.html"
+				} , {
+					"menuid" : "2",
+					"menuname" : "propertygrid(属性表格)",
+					"url" : "api/propertygrid.html"
+				} , {
+					"menuid" : "3",
+					"menuname" : "tree(树)",
+					"url" : "api/tree.html"
+				} , {
+					"menuid" : "4",
+					"menuname" : "treegrid(树形表格)",
+					"url" : "api/treegrid.html"
+				}
+			]
+		}
+	]
+}
