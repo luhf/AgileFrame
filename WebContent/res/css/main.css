@@ -10,15 +10,25 @@
 ** 特殊说明 : 目前为区域效果,添加了区域背景色
 *********************************************/
 /* 西部 */
-.cs-west { width: 200px; }
+.cs-west {
+	width: 200px;
+}
 /* 西部-导航-菜单 */
-.cs-navi-menu { margin: 5px; }
+.cs-navi-menu {
+	margin: 5px;
+}
 /* 东部 */
-.cs-east { width: 300px; }
+.cs-east {
+	width: 300px;
+}
 /* tab-右键菜单 */
-.cs-tab-menu { width: 120px; }
+.cs-tab-menu {
+	width: 120px;
+}
 /* 中部-首页备注 */
-.cs-home-remark { padding: 10px; }
+.cs-home-remark {
+	padding: 10px;
+}
 /* 北部 */
 .cs-north {
 	height: 35px;
@@ -57,10 +67,26 @@
 	display: inline-block;
 }
 /* ui主题点击 */
-.ui-skin-nav .li-skinitem span.cs-skin-on { border: 1px solid #FFFFFF; }
+.ui-skin-nav .li-skinitem span.cs-skin-on {
+	border: 1px solid #FFFFFF;
+}
 /* ui主题样式 */
-.ui-skin-nav .li-skinitem span.gray { background-color: #575765; }
-.ui-skin-nav .li-skinitem span.blue { background-color: #95B8E7; }
-.ui-skin-nav .li-skinitem span.bootstrap { background-color: #D4D4D4; }
-.ui-skin-nav .li-skinitem span.black { background-color: #3D3D3D; }
-.ui-skin-nav .li-skinitem span.metro { background-color: #DDDDDD; }
+.ui-skin-nav .li-skinitem span.gray {
+	background-color: #575765;
+}
+
+.ui-skin-nav .li-skinitem span.blue {
+	background-color: #95B8E7;
+}
+
+.ui-skin-nav .li-skinitem span.bootstrap {
+	background-color: #D4D4D4;
+}
+
+.ui-skin-nav .li-skinitem span.black {
+	background-color: #3D3D3D;
+}
+
+.ui-skin-nav .li-skinitem span.metro {
+	background-color: #DDDDDD;
+}
