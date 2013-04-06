@@ -13,7 +13,6 @@ import com.jfinal.log.Logger;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.plugin.druid.DruidStatViewHandler;
-import com.luhf.bean.Nav;
 import com.luhf.bean.User;
 import com.luhf.controller.IndexController;
 import com.luhf.controller.UserController;
@@ -66,7 +65,6 @@ public class AppConfig extends JFinalConfig{
 
 		// 配置Mapping
 		arp.addMapping("user",User.class);
-		arp.addMapping("nav",Nav.class);
 	}
 
 	/**
