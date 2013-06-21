@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2013-4-7 0:36:51                             */
+/* Created on:     2013-4-16 0:52:26                            */
 /*==============================================================*/
 
 
@@ -73,23 +73,23 @@ drop table if exists SYS_ROLE;
 /*==============================================================*/
 create table SYS_AGENT_AUTH
 (
-   AGENT_AUTH_ID        int(16) not null auto_increment comment '´úÀíÊÚÈ¨ID',
-   AUTH_OP_ID           int(16) comment 'ÊÚÈ¨²Ù×÷Ô±ID',
-   AUTHED_OP_ID         int(16) comment '±»ÊÚÈ¨²Ù×÷Ô±ID£¨½ÓÊÜÊÚÈ¨²Ù×÷Ô±£©',
-   AUTH_STATE           tinyint(2) comment 'ÊÚÈ¨×´Ì¬£º1-ÉúÐ§ 0-Ê§Ð§',
-   AUTH_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment 'ÊÚÈ¨ÉúÐ§Ê±¼ä',
-   AUTH_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment 'ÊÚÈ¨Ê§Ð§Ê±¼ä',
-   AGENT_AUTH_FUNC_TYPE tinyint(2) comment '´úÀíÊÚÈ¨¹¦ÄÜÀàÐÍ£º0-È«²¿¹¦ÄÜ 1-Ö¸¶¨¹¦ÄÜ£¨ÔÚ´úÀíÊÚÈ¨¹¦ÄÜ±í¼ÇÂ¼£©',
-   NOTES                varchar(800) comment '±¸×¢',
-   AUTH_APPR_OP_ID      int(16) comment 'ÊÚÈ¨ÉóÅúÈËID',
-   AUTH_APPR_TIME       timestamp default '0000-00-00 00:00:00' comment 'ÊÚÈ¨ÉóÅúÊ±¼ä',
-   AUTH_APPR_STATE      tinyint(2) comment 'ÊÚÈ¨ÉóÅú×´Ì¬£º1-Í¨¹ý 2-²»Í¨¹ý',
-   AUTH_APPR_COMMENT    varchar(800) comment 'ÊÚÈ¨ÉóÅúÒâ¼û',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   AGENT_AUTH_ID        int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ID',
+   AUTH_OP_ID           int(16) comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   AUTHED_OP_ID         int(16) comment 'ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½Ô±IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½',
+   AUTH_STATE           tinyint(2) comment 'ï¿½ï¿½È¨×´Ì¬ï¿½ï¿½1-ï¿½ï¿½Ð§ 0-Ê§Ð§',
+   AUTH_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½È¨ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   AUTH_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½È¨Ê§Ð§Ê±ï¿½ï¿½',
+   AGENT_AUTH_FUNC_TYPE tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1-Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½Ü±ï¿½ï¿½Â¼ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   AUTH_APPR_OP_ID      int(16) comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   AUTH_APPR_TIME       timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   AUTH_APPR_STATE      tinyint(2) comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-Í¨ï¿½ï¿½ 2-ï¿½ï¿½Í¨ï¿½ï¿½',
+   AUTH_APPR_COMMENT    varchar(800) comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (AGENT_AUTH_ID)
 )
 auto_increment = 10000
@@ -100,22 +100,22 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_AGENT_AUTH comment '¼ÇÂ¼ÓÃ»§´úÀíÊÚÈ¨ÐÅÏ¢';
+alter table SYS_AGENT_AUTH comment 'ï¿½ï¿½Â¼ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_AGENT_AUTH_FUNC                                   */
 /*==============================================================*/
 create table SYS_AGENT_AUTH_FUNC
 (
-   AGENT_AUTH_FUNC_ID   int(16) not null auto_increment comment '´úÀíÊÚÈ¨¹¦ÄÜID',
-   AGENT_AUTH_ID        int(16) not null comment '´úÀíÊÚÈ¨ID',
-   FUNC_ID              int(16) not null comment '¹¦ÄÜID',
-   NOTES                varchar(800) comment '±¸×¢',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp comment 'ÐÞ¸ÄÊ±¼ä',
+   AGENT_AUTH_FUNC_ID   int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ID',
+   AGENT_AUTH_ID        int(16) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ID',
+   FUNC_ID              int(16) not null comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (AGENT_AUTH_FUNC_ID)
 )
 auto_increment = 10000
@@ -126,49 +126,49 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_AGENT_AUTH_FUNC comment '¼ÇÂ¼´úÀíÊÚÈ¨¿ÉÊ¹ÓÃµÄÏµÍ³¹¦ÄÜ£¨Ö»ÊÚÈ¨Ö¸¶¨²Ëµ¥¹¦ÄÜÊ±¼ÇÂ¼£©';
+alter table SYS_AGENT_AUTH_FUNC comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½Ê¹ï¿½Ãµï¿½ÏµÍ³ï¿½ï¿½ï¿½Ü£ï¿½Ö»ï¿½ï¿½È¨Ö¸ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Â¼ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_AUDIT_LOG                                         */
 /*==============================================================*/
 create table SYS_AUDIT_LOG
 (
-   AUDIT_LOG_ID         int(16) not null auto_increment comment 'ÏµÍ³Éó¼ÆÈÕÖ¾ID',
-   RESOURCE_KIND        int(6) comment '×ÊÔ´Àà±ð£¨¶ÔÓÚÓ¦ÓÃÀ´ËµÖµÎª¡°1¡±£©',
-   IDR_CREATION_TIME    timestamp default '0000-00-00 00:00:00' comment 'ÏûÏ¢´´½¨Ê±¼ä',
-   IDENTITY_NAME        varchar(80) comment '¹ÜÀíÊµÌåÃû³Æ£¨ÓÃÓÚ²É¼¯ÒµÎñ´¦Àí£©',
-   RESOURCE_CODE        varchar(30) comment '×ÊÔ´±àÂë£¨Ã¿ÖÖÓ¦ÓÃÏµÍ³¶ÔÓ¦Ò»ÖÖ×ÊÔ´±àÂë£©',
-   OPERATE_TIME         timestamp default '0000-00-00 00:00:00' comment '²Ù×÷Ê±¼ä',
-   OP_TYPE_ID           varchar(30) comment '²Ù×÷ÀàÐÍ±àÂë(1-CQESOP--10101:Í³Ò»ÊÓÍ¼¹ÜÀí_²éÑ¯ 1-CQESOP--10102:Í³Ò»ÊÓÍ¼¹ÜÀí_µ¼³öEXCEL  ...Notes)',
-   OP_TYPE_NAME         varchar(80) comment '²Ù×÷ÀàÐÍÃû³Æ£¨¶ÔÓ¦²Ù×÷ÀàÐÍ±àÂëµÄ²Ù×÷Ãû³Æ£©',
-   OP_LEVEL_ID          tinyint(2) comment '²Ù×÷¼¶±ð£¨Éó¼Æ¼¶±ð£º1-Ò»°ã 2-ÖØÒª 3-Ãô¸Ð 4-¾¯¸æ 5-ÑÏÖØ£©',
-   OPERATE_RESULT       tinyint(2) comment '²Ù×÷½á¹û£º0-³É¹¦ 1-Ê§°Ü',
-   OPERATE_CONTENT      varchar(2000) comment '²Ù×÷ÄÚÈÝ£¨4AÒµÎñÊ¹ÓÃ£©',
-   SERVER_ADDRESS       varchar(20) comment '·þÎñ¶ËIPµØÖ·',
-   SERVER_MAC           varchar(20) comment '·þÎñÆ÷¶ËmacµØÖ·',
-   SERVER_PORT          varchar(20) comment '·þÎñÆ÷¶Ë¶Ë¿Ú',
-   CLIENT_ADDRESS       varchar(20) comment '¿Í»§¶ËÍ¨ÐÅIPµØÖ·£¨ÓÃ»§µÇÂ¼ËùÊ¹ÓÃµÄ¿Í»§¶ËIP£©',
-   CLIENT_PORT          varchar(20) comment '¿Í»§¶Ë¶Ë¿Ú',
-   CLIENT_MAC           varchar(20) comment '¿Í»§¶ËmacµØÖ·£¨¶à¸ö£©',
-   CLIENT_NETWORK_ADDRESS varchar(200) comment '¿Í»§¶ËIPµØÖ·£¨ÓÃ»§¿Í»§¶ËÉÏ¶àÍø¿¨IP£©',
-   CLIENT_CPU_SERIAL    varchar(40) comment '¿Í»§¶ËCPUÐòÁÐºÅ',
-   SUB_ACCOUNT_NAME     varchar(30) comment 'Ó¦ÓÃ´ÓÕËºÅ£¨ÓÃ»§µÇÂ¼Ó¦ÓÃÏµÍ³Ê¹ÓÃµÄÕËºÅ£©',
-   MAIN_ACCOUNT_NAME    varchar(40) comment 'Ö÷ÕËºÅÃû³Æ',
-   TASK_CODE            varchar(20) comment '¸Ã²Ù×÷¶ÔÓ¦µÄ¹¤µ¥ºÅ',
-   MODULE_ID            varchar(20) comment 'Ä£¿éID',
-   MODULE_NAME          varchar(200) comment 'Ä£¿éÃû³Æ',
-   SYNC4A_FLAG          tinyint(2) comment 'Í¬²½4A±êÖ¾£º0-Î´Í¬²½ 1-ÒÑÍ¬²½',
-   SYNC4A_TIME          timestamp default '0000-00-00 00:00:00' comment 'Í¬²½4AÊ±¼ä',
-   BANK_APPROVE         varchar(200) comment '½ð¿âÉóÅúÁ÷Ë®ºÅ',
-   BANK_PROOF           tinyint(2) comment '½ð¿âÊ½Éó¼ÆÆ¾Ö¤£¨0-²Ù×÷ÐèÒª½ð¿âÊ½Éó¼Æ£¬±¾´Î²Ù×÷Ã»ÓÐÆ¾Ö¤ 1-²Ù×÷ÐèÒª½ð¿âÊ½Éó¼Æ£¬±¾´Î²Ù×÷ÓÐÆ¾Ö¤ 2-²Ù×÷²»ÐèÒª½ð¿âÊ½Éó¼Æ Ä¬ÈÏÖµ£©',
-   BANK_FLAG            tinyint(2) comment '½ð¿âÑéÖ¤±êÖ¾£º -1-Ö±½Ó¹Ø±Õ´°¿Ú£¬Î´ÉêÇëÉóÅú 
-            0-ÉóÅú²»Í¨¹ý 
-            1-ÉóÅúÍ¨¹ý 
-            2-³¬Ê±£¬ÔÊÐíÒµÎñ¼ÌÐø·ÃÎÊ 
-            3-³¬Ê±£¬²»ÔÊÐíÒµÎñ¼ÌÐø·ÃÎÊ
-            4-³öÏÖ´íÎó»òÒì³££¨°üÀ¨Êý¾ÝÒì³££©
-            5-Î´ÅäÖÃ²ßÂÔ£¬ÔÊÐíÒµÎñ¼ÌÐø·ÃÎÊ
-            6-Î´ÅäÖÃ²ßÂÔ£¬²»ÔÊÐí¼ÌÐø·ÃÎÊ',
+   AUDIT_LOG_ID         int(16) not null auto_increment comment 'ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ID',
+   RESOURCE_KIND        int(6) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ð£¨¶ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ËµÖµÎªï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½',
+   IDR_CREATION_TIME    timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   IDENTITY_NAME        varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ú²É¼ï¿½Òµï¿½ï¿½ï¿½?',
+   RESOURCE_CODE        varchar(30) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ë£¨Ã¿ï¿½ï¿½Ó¦ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ó¦Ò»ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ë£©',
+   OPERATE_TIME         timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   OP_TYPE_ID           varchar(30) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½(1-CQESOP--10101:Í³Ò»ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½Ñ¯ 1-CQESOP--10102:Í³Ò»ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½EXCEL  ...Notes)',
+   OP_TYPE_NAME         varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½',
+   OP_LEVEL_ID          tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½1-Ò»ï¿½ï¿½ 2-ï¿½ï¿½Òª 3-ï¿½ï¿½ï¿½ï¿½ 4-ï¿½ï¿½ï¿½ï¿½ 5-ï¿½ï¿½ï¿½Ø£ï¿½',
+   OPERATE_RESULT       tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0-ï¿½É¹ï¿½ 1-Ê§ï¿½ï¿½',
+   OPERATE_CONTENT      varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½4AÒµï¿½ï¿½Ê¹ï¿½Ã£ï¿½',
+   SERVER_ADDRESS       varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·',
+   SERVER_MAC           varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½macï¿½ï¿½Ö·',
+   SERVER_PORT          varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶Ë¿ï¿½',
+   CLIENT_ADDRESS       varchar(20) comment 'ï¿½Í»ï¿½ï¿½ï¿½Í¨ï¿½ï¿½IPï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ê¹ï¿½ÃµÄ¿Í»ï¿½ï¿½ï¿½IPï¿½ï¿½',
+   CLIENT_PORT          varchar(20) comment 'ï¿½Í»ï¿½ï¿½Ë¶Ë¿ï¿½',
+   CLIENT_MAC           varchar(20) comment 'ï¿½Í»ï¿½ï¿½ï¿½macï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CLIENT_NETWORK_ADDRESS varchar(200) comment 'ï¿½Í»ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½IPï¿½ï¿½',
+   CLIENT_CPU_SERIAL    varchar(40) comment 'ï¿½Í»ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½Ðºï¿½',
+   SUB_ACCOUNT_NAME     varchar(30) comment 'Ó¦ï¿½Ã´ï¿½ï¿½ËºÅ£ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Â¼Ó¦ï¿½ï¿½ÏµÍ³Ê¹ï¿½Ãµï¿½ï¿½ËºÅ£ï¿½',
+   MAIN_ACCOUNT_NAME    varchar(40) comment 'ï¿½ï¿½ï¿½Ëºï¿½ï¿½ï¿½ï¿½',
+   TASK_CODE            varchar(20) comment 'ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½',
+   MODULE_ID            varchar(20) comment 'Ä£ï¿½ï¿½ID',
+   MODULE_NAME          varchar(200) comment 'Ä£ï¿½ï¿½ï¿½ï¿½ï¿½',
+   SYNC4A_FLAG          tinyint(2) comment 'Í¬ï¿½ï¿½4Aï¿½ï¿½Ö¾ï¿½ï¿½0-Î´Í¬ï¿½ï¿½ 1-ï¿½ï¿½Í¬ï¿½ï¿½',
+   SYNC4A_TIME          timestamp default '0000-00-00 00:00:00' comment 'Í¬ï¿½ï¿½4AÊ±ï¿½ï¿½',
+   BANK_APPROVE         varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½',
+   BANK_PROOF           tinyint(2) comment 'ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Æ¾Ö¤ï¿½ï¿½0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ê½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Æ¾Ö¤ 1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ê½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½Æ¾Ö¤ 2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ Ä¬ï¿½ï¿½Öµï¿½ï¿½',
+   BANK_FLAG            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½Ö¾ï¿½ï¿½ -1-Ö±ï¿½Ó¹Ø±Õ´ï¿½ï¿½Ú£ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+            0-ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ 
+            1-ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ 
+            2-ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+            3-ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            4-ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½
+            5-Î´ï¿½ï¿½ï¿½Ã²ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            6-Î´ï¿½ï¿½ï¿½Ã²ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
    EXT_DATE_01          TIMESTAMP default '0000-00-00 00:00:00',
    EXT_DATE_02          TIMESTAMP default '0000-00-00 00:00:00',
    EXT_NUM_01           int(16),
@@ -191,22 +191,22 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_AUDIT_LOG comment '¼ÇÂ¼Éó¼ÆÈÕÖ¾ÐÅÏ¢';
+alter table SYS_AUDIT_LOG comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_CODE_COL_RLT                                      */
 /*==============================================================*/
 create table SYS_CODE_COL_RLT
 (
-   CODE_ID              varchar(30) not null comment '´úÂë±êÊ¶',
-   CODE_TAB_NAME        varchar(30) not null comment '´úÂë¶ÔÓ¦±íÃû',
-   CODE_COL_NAME        varchar(30) not null comment '´úÂë¶ÔÓ¦×Ö¶ÎÃû',
-   NOTES                varchar(800) comment '±¸×¢',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   CODE_ID              varchar(30) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶',
+   CODE_TAB_NAME        varchar(30) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½',
+   CODE_COL_NAME        varchar(30) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ö¶ï¿½ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (CODE_ID, CODE_TAB_NAME, CODE_COL_NAME)
 )
 checksum = 1
@@ -216,24 +216,24 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_CODE_COL_RLT comment '¶¨ÒåÊ¹ÓÃ´úÂëµÄ±í×Ö¶Î¶ÔÓ¦ÐÅÏ¢
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_CODE_COL_RLT comment 'ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã´ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ö¶Î¶ï¿½Ó¦ï¿½ï¿½Ï¢
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_CODE_DEF                                          */
 /*==============================================================*/
 create table SYS_CODE_DEF
 (
-   CODE_ID              varchar(30) not null comment '´úÂë±êÊ¶',
-   CODE_KIND            int(6) comment '´úÂë·ÖÀà',
-   CODE_NAME            varchar(80) comment '´úÂëÃû³Æ',
-   CODE_DESC            varchar(400) comment '´úÂëÃèÊö',
-   CODE_DATA_TYPE       tinyint(2) comment '´úÂëÊý¾ÝÀàÐÍ£º1-ÊýÖµ 2-×Ö·û',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   CODE_ID              varchar(30) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶',
+   CODE_KIND            int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CODE_NAME            varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CODE_DESC            varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CODE_DATA_TYPE       tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½Öµ 2-ï¿½Ö·ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (CODE_ID)
 )
 checksum = 1
@@ -243,25 +243,25 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_CODE_DEF comment '¶¨ÒåÏµÍ³Ê¹ÓÃµÄÃ¶¾ÙÖµ´úÂë
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_CODE_DEF comment 'ï¿½ï¿½ï¿½ï¿½ÏµÍ³Ê¹ï¿½Ãµï¿½Ã¶ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_CODE_VALUE                                        */
 /*==============================================================*/
 create table SYS_CODE_VALUE
 (
-   CODE_ID              varchar(30) not null comment '´úÂë±êÊ¶',
-   CODE_VALUE           varchar(40) not null comment '´úÂëÈ¡Öµ',
-   CODE_VALUE_NAME      varchar(80) comment '´úÂëÈ¡ÖµÃû³Æ',
-   CODE_VALUE_ALIAS     varchar(80) comment '´úÂëÈ¡Öµ±ðÃû',
-   CODE_VALUE_DESC      varchar(400) comment '´úÂëÈ¡ÖµÃèÊö',
-   CODE_VALUE_ORDER     int(6) comment '´úÂëÈ¡ÖµÅÅÐò',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   CODE_ID              varchar(30) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶',
+   CODE_VALUE           varchar(40) not null comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµ',
+   CODE_VALUE_NAME      varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½',
+   CODE_VALUE_ALIAS     varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½ï¿½',
+   CODE_VALUE_DESC      varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½ï¿½',
+   CODE_VALUE_ORDER     int(6) comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (CODE_ID, CODE_VALUE)
 )
 checksum = 1
@@ -271,26 +271,26 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_CODE_VALUE comment '¶¨ÒåÏµÍ³Ê¹ÓÃµÄÃ¶¾ÙÖµ´úÂëº¬ÒåÐÅÏ¢
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_CODE_VALUE comment 'ï¿½ï¿½ï¿½ï¿½ÏµÍ³Ê¹ï¿½Ãµï¿½Ã¶ï¿½ï¿½Öµï¿½ï¿½ï¿½ëº¬ï¿½ï¿½ï¿½ï¿½Ï¢
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_DATA_AUTH_TYPE                                    */
 /*==============================================================*/
 create table SYS_DATA_AUTH_TYPE
 (
-   DATA_AUTH_TYPE_ID    int(16) not null auto_increment comment 'Êý¾ÝÈ¨ÏÞÀàÐÍID',
-   DATA_AUTH_TYPE_NAME  varchar(80) comment 'Êý¾ÝÈ¨ÏÞÀàÐÍÃû³Æ',
-   DATA_AUTH_TYPE_DESC  varchar(400) comment 'Êý¾ÝÈ¨ÏÞÀàÐÍÃèÊö',
-   DATA_AUTH_TAB_NAME   varchar(30) comment 'Êý¾ÝÈ¨ÏÞ¶ÔÓ¦±íÃû',
-   DATA_AUTH_COL_NAME   varchar(30) comment 'Êý¾ÝÈ¨ÏÞ¶ÔÓ¦×Ö¶ÎÃû',
-   AUTH_OBJ_SEL_URL     varchar(200) comment 'È¨ÏÞ¶ÔÏóÑ¡ÔñÒ³ÃæURL',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   DATA_AUTH_TYPE_ID    int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   DATA_AUTH_TYPE_NAME  varchar(80) comment 'ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_AUTH_TYPE_DESC  varchar(400) comment 'ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_AUTH_TAB_NAME   varchar(30) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½',
+   DATA_AUTH_COL_NAME   varchar(30) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¶ï¿½Ó¦ï¿½Ö¶ï¿½ï¿½ï¿½',
+   AUTH_OBJ_SEL_URL     varchar(200) comment 'È¨ï¿½Þ¶ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò³ï¿½ï¿½URL',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (DATA_AUTH_TYPE_ID)
 )
 auto_increment = 10000
@@ -301,27 +301,27 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_DATA_AUTH_TYPE comment '¶¨Òå¿ØÖÆÊý¾ÝÈ¨ÏÞµÄ¶ÔÏóÀàÐÍ£¬Èç×éÖ¯¡¢ÇøÓò¡¢Ô±¹¤¡¢²úÆ·
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_DATA_AUTH_TYPE comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ÞµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_DFLT_DATA_AUTH                                    */
 /*==============================================================*/
 create table SYS_DFLT_DATA_AUTH
 (
-   DFLT_DATA_AUTH_ID    int(16) not null auto_increment comment 'È±Ê¡Êý¾ÝÈ¨ÏÞ¹æÔòID',
-   DATA_AUTH_TYPE_ID    int(16) comment 'Êý¾ÝÈ¨ÏÞÀàÐÍID',
-   RES_ID               int(16) comment '×ÊÔ´ID',
-   ROLE_ID              int(16) comment '½ÇÉ«ID',
-   DFLT_DATA_AUTH_NAME  varchar(80) comment 'È±Ê¡Êý¾ÝÈ¨ÏÞ¹æÔòÃû³Æ',
-   DFLT_DATA_AUTH_DESC  varchar(400) comment 'È±Ê¡Êý¾ÝÈ¨ÏÞ¹æÔòÃèÊö',
-   DATA_AUTH_RULE_TYPE  tinyint(2) comment 'Êý¾ÝÈ¨ÏÞ¹æÔòÀàÐÍ£º1-×ÔÉíÊý¾ÝÈ¨ÏÞ 2-×ÔÉí¼°ÏÂ¼¶Êý¾ÝÈ¨ÏÞ',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   DFLT_DATA_AUTH_ID    int(16) not null auto_increment comment 'È±Ê¡ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½ID',
+   DATA_AUTH_TYPE_ID    int(16) comment 'ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   RES_ID               int(16) comment 'ï¿½ï¿½Ô´ID',
+   ROLE_ID              int(16) comment 'ï¿½ï¿½É«ID',
+   DFLT_DATA_AUTH_NAME  varchar(80) comment 'È±Ê¡ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DFLT_DATA_AUTH_DESC  varchar(400) comment 'È±Ê¡ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_AUTH_RULE_TYPE  tinyint(2) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ 2-ï¿½ï¿½ï¿½?ï¿½Â¼ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (DFLT_DATA_AUTH_ID)
 )
 auto_increment = 10000
@@ -332,22 +332,22 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_DFLT_DATA_AUTH comment '¼ÇÂ¼¶ÔÏµÍ³×ÊÔ´Ê¹ÓÃµÄÊý¾ÝÈ¨ÏÞÀàÐÍ£¨È±Ê¡Êý¾ÝÈ¨ÏÞ¹æÔò£©';
+alter table SYS_DFLT_DATA_AUTH comment 'ï¿½ï¿½Â¼ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ô´Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½È±Ê¡ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_DOMAIN                                            */
 /*==============================================================*/
 create table SYS_DOMAIN
 (
-   DOMAIN_ID            int(16) not null auto_increment comment 'ÓòID',
-   DOMAIN_CODE          varchar(40) comment 'Óò±àÂë',
-   DOMAIN_NAME          varchar(80) comment 'ÓòÃû³Æ',
-   DOMAIN_DESC          varchar(400) comment 'ÓòÃèÊö',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   DOMAIN_ID            int(16) not null auto_increment comment 'ï¿½ï¿½ID',
+   DOMAIN_CODE          varchar(40) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DOMAIN_NAME          varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DOMAIN_DESC          varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (DOMAIN_ID)
 )
 auto_increment = 10000
@@ -358,38 +358,38 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_DOMAIN comment '¶¨ÒåÈ¨ÏÞÓò£¬Çø·ÖÍ¬Ò»ÏµÍ³ÏÂ²»Í¬È¨ÏÞ·¶Î§
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_DOMAIN comment 'ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ò»ÏµÍ³ï¿½Â²ï¿½Í¬È¨ï¿½Þ·ï¿½Î§
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_FUNC                                              */
 /*==============================================================*/
 create table SYS_FUNC
 (
-   FUNC_ID              int(16) not null auto_increment comment '¹¦ÄÜID',
-   SUP_FUNC_ID          int(16) comment '¹¦ÄÜID',
-   OPRT_TYPE_ID         int(16) comment '²Ù×÷ÀàÐÍID',
-   RES_ID               int(16) comment '×ÊÔ´ID',
-   FUNC_TYPE            tinyint(2) comment '¹¦ÄÜÀà±ð£º1-²Ëµ¥ 2-Ò³Ãæ 3-°´Å¥ 4-¹¤×÷Ì¨ 5-×é¼þ',
-   FUNC_LEVEL           tinyint(2) comment '¹¦ÄÜ¼¶±ð£º1-Ò»¼¶ 2-¶þ¼¶ 3-Èý¼¶ 4-ËÄ¼¶ ...',
-   FUNC_CODE            varchar(80) comment '¹¦ÄÜ±àÂë',
-   FUNC_NAME            varchar(200) comment '¹¦ÄÜÃû³Æ',
-   FUNC_DESC            varchar(400) comment '¹¦ÄÜÃèÊö',
-   FUNC_ORDER           int(6) comment '¹¦ÄÜÅÅÐò',
-   FUNC_URL             varchar(1000) comment '¹¦ÄÜURL',
-   FUNC_IMG             varchar(1000) comment '¹ØÁªÍ¼Æ¬£¨°üÀ¨Â·¾¶¡¢ÎÄ¼þÃû£©',
-   FUNC_PARAM           varchar(1000) comment '¹¦ÄÜ²ÎÊý',
-   IF_DISPLAY           tinyint(2) comment 'ÊÇ·ñÏÔÊ¾£º1-ÏÔÊ¾ 2-²»ÏÔÊ¾£¨¶¨ÒåÒþº¬²Ëµ¥¡¢Ò³Ãæ£©',
-   IF_COMMENT           tinyint(2) comment 'ÊÇ·ñ¿ÉÆÀÂÛ£º1-¿ÉÆÀÂÛ 0-²»¿ÉÆÀÂÛ',
-   FUNC_HELP_FLAG       tinyint(2) comment '¹¦ÄÜ°ïÖú±êÖ¾£º1-ÓÐ°ïÖú 0-ÎÞ°ïÖú',
-   FUNC_HELP_URL        varchar(1000) comment '¹¦ÄÜ°ïÖúURL',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   FUNC_ID              int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   SUP_FUNC_ID          int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   OPRT_TYPE_ID         int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   RES_ID               int(16) comment 'ï¿½ï¿½Ô´ID',
+   FUNC_TYPE            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1-ï¿½Ëµï¿½ 2-Ò³ï¿½ï¿½ 3-ï¿½ï¿½Å¥ 4-ï¿½ï¿½ï¿½ï¿½Ì¨ 5-ï¿½ï¿½ï¿½',
+   FUNC_LEVEL           tinyint(2) comment 'ï¿½ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½1-Ò»ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ 3-ï¿½ï¿½ 4-ï¿½Ä¼ï¿½ ...',
+   FUNC_CODE            varchar(80) comment 'ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½',
+   FUNC_NAME            varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_DESC            varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_ORDER           int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_URL             varchar(1000) comment 'ï¿½ï¿½ï¿½ï¿½URL',
+   FUNC_IMG             varchar(1000) comment 'ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½',
+   FUNC_PARAM           varchar(1000) comment 'ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½',
+   IF_DISPLAY           tinyint(2) comment 'ï¿½Ç·ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½1-ï¿½ï¿½Ê¾ 2-ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ò³ï¿½æ£©',
+   IF_COMMENT           tinyint(2) comment 'ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Û£ï¿½1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_HELP_FLAG       tinyint(2) comment 'ï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½1-ï¿½Ð°ï¿½ï¿½ï¿½ 0-ï¿½Þ°ï¿½ï¿½ï¿½',
+   FUNC_HELP_URL        varchar(1000) comment 'ï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½URL',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (FUNC_ID)
 )
 auto_increment = 10000
@@ -400,26 +400,26 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_FUNC comment '¼ÇÂ¼ÏµÍ³¹¦ÄÜÐÅÏ¢£¬°üÀ¨²Ëµ¥¡¢Ò³Ãæ¡¢°´Å¥¡¢¹¤×÷Ì¨¡¢×é¼þ';
+alter table SYS_FUNC comment 'ï¿½ï¿½Â¼ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ò³ï¿½æ¡¢ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_JOBFUNC                                           */
 /*==============================================================*/
 create table SYS_JOBFUNC
 (
-   JOBFUNC_ID           int(16) not null auto_increment comment 'Ö°ÄÜID',
-   ROLE_ID              int(16) comment '½ÇÉ«ID',
-   JOBFUNC_CODE         varchar(40) comment 'Ö°ÄÜ±àÂë',
-   JOBFUNC_NAME         varchar(80) comment 'Ö°ÄÜÃû³Æ',
-   JOBFUNC_DESC         varchar(400) comment 'Ö°ÄÜÃèÊö',
-   JOBFUNC_ORDER        int(6) comment 'Ö°ÄÜÅÅÐò',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   JOBFUNC_ID           int(16) not null auto_increment comment 'Ö°ï¿½ï¿½ID',
+   ROLE_ID              int(16) comment 'ï¿½ï¿½É«ID',
+   JOBFUNC_CODE         varchar(40) comment 'Ö°ï¿½Ü±ï¿½ï¿½ï¿½',
+   JOBFUNC_NAME         varchar(80) comment 'Ö°ï¿½ï¿½ï¿½ï¿½ï¿½',
+   JOBFUNC_DESC         varchar(400) comment 'Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   JOBFUNC_ORDER        int(6) comment 'Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (JOBFUNC_ID)
 )
 auto_increment = 10000
@@ -430,24 +430,24 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_JOBFUNC comment '¼ÇÂ¼Ö°ÄÜÐÅÏ¢£¬Ö°ÄÜÊÇÒ»Ð©ÏµÍ³¹¦ÄÜµÄ¼¯ºÏ';
+alter table SYS_JOBFUNC comment 'ï¿½ï¿½Â¼Ö°ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½Ò»Ð©ÏµÍ³ï¿½ï¿½ï¿½ÜµÄ¼ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_JOBFUNC_FUNC                                      */
 /*==============================================================*/
 create table SYS_JOBFUNC_FUNC
 (
-   JOBFUNC_FUNC_ID      int(16) not null auto_increment comment 'Ö°ÄÜ¹¦ÄÜID',
-   FUNC_ID              int(16) comment '¹¦ÄÜID',
-   JOBFUNC_ID           int(16) comment 'Ö°ÄÜID',
-   DOMAIN_ID            int(6) comment 'ÓòID',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   JOBFUNC_FUNC_ID      int(16) not null auto_increment comment 'Ö°ï¿½Ü¹ï¿½ï¿½ï¿½ID',
+   FUNC_ID              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   JOBFUNC_ID           int(16) comment 'Ö°ï¿½ï¿½ID',
+   DOMAIN_ID            int(6) comment 'ï¿½ï¿½ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (JOBFUNC_FUNC_ID)
 )
 auto_increment = 10000
@@ -458,47 +458,47 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_JOBFUNC_FUNC comment '¼ÇÂ¼Ö°ÄÜ°üº¬µÄÏµÍ³¹¦ÄÜ';
+alter table SYS_JOBFUNC_FUNC comment 'ï¿½ï¿½Â¼Ö°ï¿½Ü°ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_LOG                                               */
 /*==============================================================*/
 create table SYS_LOG
 (
-   LOG_ID               int(16) not null auto_increment comment 'ÏµÍ³ÈÕÖ¾ID',
-   LOG_TYPE             tinyint(2) comment 'ÈÕÖ¾ÀàÐÍ£º1-ÒµÎñÈÕÖ¾£¨Ó¦ÓÃÖ÷¶¯¼ÇÂ¼µÄÒµÎñÐÅÏ¢£© 2-²Ù×÷ÈÕÖ¾£¨×Ô¶¯¼ÇÂ¼µÄµã»÷ÈÕÖ¾£© 3-ÒµÎñ²Ù×÷ÈÕÖ¾£¨ºÏ²¢Á½ÖÖÈÕÖ¾ÀàÐÍ£©',
-   OP_TYPE              tinyint(2) comment '²Ù×÷ÀàÐÍ£º11-µÇÂ¼ 12-ÍË³ö   21-²éÑ¯£¨²é¿´£© 22-Ôö¼Ó 23-ÐÞ¸Ä 24-É¾³ý 25-µ¼Èë£¨ÉÏ´«£© 26-µ¼³ö£¨ÏÂÔØ£©27-ÉóÅú 28-ËÑË÷ 29-ËÑË÷½á¹û²é¿´',
-   RSLT_TYPE            tinyint(2) comment '½á¹ûÀàÐÍ£º0-³É¹¦ 1-Ê§°Ü£¨²ÎÊýÎª¿ÕµÈ£© 2-Òì³£',
-   SRC_TYPE             tinyint(2) comment 'À´Ô´ÀàÐÍ£º1-±¾ÏµÍ³ 2-ÍâÏµÍ³',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   OP_NAME              varchar(200) comment '²Ù×÷Ô±ÐÕÃû',
-   ORG_ID               int(16) comment '×éÖ¯ID',
-   ORG_NAME             varchar(200) comment '×éÖ¯Ãû³Æ',
-   AGENT_FLAG           tinyint(2) comment '´úÀí±êÖ¾£º1-´úÀí 0-·Ç´úÀí',
-   AGENT_OP_ID          int(16) comment '´úÀí²Ù×÷Ô±ID',
-   AGENT_OP_NAME        varchar(200) comment '´úÀí²Ù×÷Ô±ÐÕÃû',
-   OPRT_START_TIME      timestamp default '0000-00-00 00:00:00' comment '²Ù×÷¿ªÊ¼Ê±¼ä',
-   OPRT_END_TIME        timestamp default '0000-00-00 00:00:00' comment '²Ù×÷½áÊøÊ±¼ä',
-   OPRT_INTERVAL        int(16) comment '²Ù×÷Ê±³¤£¨Ãë£©',
-   OPRT_NAME            varchar(200) comment '²Ù×÷Ãû³Æ',
-   OPRT_DESC            varchar(2000) comment '²Ù×÷ËµÃ÷',
-   OPRT_URL             varchar(400) comment '²Ù×÷URL',
-   OPRT_PARAM           varchar(400) comment '²Ù×÷²ÎÊý',
-   OPRT_CONTENT         varchar(2000) comment '²Ù×÷ÄÚÈÝ£¨²åÈëÐÞ¸ÄÉ¾³ý²Ù×÷µÄÊôÐÔÖµ¡¢ËÑË÷¹Ø¼ü×ÖµÈ£©',
-   SERVER_ADDRESS       varchar(20) comment '·þÎñ¶ËIPµØÖ·',
-   IP_ADDRESS           varchar(30) comment 'IPµØÖ·',
-   SESSION_ID           varchar(200) comment '»á»°ID',
-   CONNECT_TYPE         tinyint(2) comment '½ÓÈë·½Ê½£º1-WEB½ÓÈë 2-ÊÖ»ú½ÓÈë',
-   MOBILE_NO            varchar(20) comment 'ÊÖ»úºÅ',
-   FUNC_ID              int(16) comment '¹¦ÄÜID',
-   FUNC_NAME            varchar(200) comment '¹¦ÄÜÃû³Æ',
-   FUNC_TYPE            tinyint(2) comment '¹¦ÄÜÀà±ð£º1-²Ëµ¥ 2-Ò³Ãæ 3-°´Å¥ 4-¹¤×÷Ì¨ 5-×é¼þ',
-   OP_OBJ_TYPE          int(6) comment '²Ù×÷¶ÔÏóÀàÐÍ£¨²Ù×÷µÄÒµÎñ¶ÔÏóÀàÐÍ£º1-ÐèÇó 2-±¨±í 3-ÎÄµµ 4-Ö¸±ê 5-ÖªÊ¶¿â 6-±¨±íÊµÀý 7-ÐèÇó¸½¼þ £©',
-   OP_OBJ_ID            int(200) comment '²Ù×÷¶ÔÏóID£¨ÐèÇóID¡¢±¨±íID¡¢±¨±íÊµÀýID¡¢Ö¸±êIDµÈ¡¢ÐèÇó¸½¼þID£©',
-   OP_OBJ_NAME          varchar(200) comment '²Ù×÷¶ÔÏóÃû³Æ£¨ÐèÇóÃû³Æ¡¢±¨±íÃû³Æ¡¢±¨±íÊµÀýÃû³Æ¡¢Ö¸±êÃû³Æ¡¢ÐèÇó¸½¼þÎÄµµÃû³Æ£©',
-   OP_ENT_NAME          varchar(200) comment '²Ù×÷ÊµÌåÃû³Æ£¨²Ù×÷ÊµÌå±íÃû³Æ£©',
-   OP_ENT_SQL           varchar(2000) comment '²Ù×÷ÊµÌåSQLÓï¾ä£¨ÍêÕûSQLÓï¾ä£©',
-   OP_ENT_CLAUSE        varchar(800) comment '²Ù×÷ÊµÌåÌõ¼þ×Ó¾ä£¨È·¶¨Êý¾Ý¼ÇÂ¼µÄ±êÊ¶Ìõ¼þ£©',
+   LOG_ID               int(16) not null auto_increment comment 'ÏµÍ³ï¿½ï¿½Ö¾ID',
+   LOG_TYPE             tinyint(2) comment 'ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Í£ï¿½1-Òµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Â¼ï¿½Äµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ 3-Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Í£ï¿½',
+   OP_TYPE              tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½11-ï¿½ï¿½Â¼ 12-ï¿½Ë³ï¿½   21-ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½é¿´ï¿½ï¿½ 22-ï¿½ï¿½ï¿½ï¿½ 23-ï¿½Þ¸ï¿½ 24-É¾ï¿½ï¿½ 25-ï¿½ï¿½ï¿½ë£¨ï¿½Ï´ï¿½ï¿½ï¿½ 26-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½27-ï¿½ï¿½ï¿½ï¿½ 28-ï¿½ï¿½ï¿½ï¿½ 29-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¿´',
+   RSLT_TYPE            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-ï¿½É¹ï¿½ 1-Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ÕµÈ£ï¿½ 2-ï¿½ì³£',
+   SRC_TYPE             tinyint(2) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ÏµÍ³ 2-ï¿½ï¿½ÏµÍ³',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   OP_NAME              varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   ORG_ID               int(16) comment 'ï¿½ï¿½Ö¯ID',
+   ORG_NAME             varchar(200) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½',
+   AGENT_FLAG           tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½1-ï¿½ï¿½ï¿½ï¿½ 0-ï¿½Ç´ï¿½ï¿½ï¿½',
+   AGENT_OP_ID          int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   AGENT_OP_NAME        varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   OPRT_START_TIME      timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Ê±ï¿½ï¿½',
+   OPRT_END_TIME        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   OPRT_INTERVAL        int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ë£©',
+   OPRT_NAME            varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OPRT_DESC            varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½',
+   OPRT_URL             varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½URL',
+   OPRT_PARAM           varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OPRT_CONTENT         varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ÖµÈ£ï¿½',
+   SERVER_ADDRESS       varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·',
+   IP_ADDRESS           varchar(30) comment 'IPï¿½ï¿½Ö·',
+   SESSION_ID           varchar(200) comment 'ï¿½á»°ID',
+   CONNECT_TYPE         tinyint(2) comment 'ï¿½ï¿½ï¿½ë·½Ê½ï¿½ï¿½1-WEBï¿½ï¿½ï¿½ï¿½ 2-ï¿½Ö»ï¿½ï¿½ï¿½ï¿½',
+   MOBILE_NO            varchar(20) comment 'ï¿½Ö»ï¿½ï¿½',
+   FUNC_ID              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   FUNC_NAME            varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_TYPE            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1-ï¿½Ëµï¿½ 2-Ò³ï¿½ï¿½ 3-ï¿½ï¿½Å¥ 4-ï¿½ï¿½ï¿½ï¿½Ì¨ 5-ï¿½ï¿½ï¿½',
+   OP_OBJ_TYPE          int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ 3-ï¿½Äµï¿½ 4-Ö¸ï¿½ï¿½ 5-ÖªÊ¶ï¿½ï¿½ 6-ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ 7-ï¿½ï¿½ï¿½ó¸½¼ï¿½ ï¿½ï¿½',
+   OP_OBJ_ID            int(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½IDï¿½ï¿½Ö¸ï¿½ï¿½IDï¿½È¡ï¿½ï¿½ï¿½ï¿½ó¸½¼ï¿½IDï¿½ï¿½',
+   OP_OBJ_NAME          varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Æ¡ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ó¸½¼ï¿½ï¿½Äµï¿½ï¿½ï¿½Æ£ï¿½',
+   OP_ENT_NAME          varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½',
+   OP_ENT_SQL           varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½SQLï¿½ï¿½ä£¨ï¿½ï¿½ï¿½ï¿½SQLï¿½ï¿½ä£©',
+   OP_ENT_CLAUSE        varchar(800) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ä£¨È·ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½Â¼ï¿½Ä±ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
    EXT_DATE_01          timestamp default '0000-00-00 00:00:00',
    EXT_DATE_02          timestamp default '0000-00-00 00:00:00',
    EXT_NUM_01           int(16),
@@ -521,47 +521,47 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_LOG comment '¼ÇÂ¼µÇÂ¼¡¢²Ù×÷µÈÏµÍ³ÈÕÖ¾ÐÅÏ¢£¨°üº¬´úÀíÈÕÖ¾£©';
+alter table SYS_LOG comment 'ï¿½ï¿½Â¼ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ö¾ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_LOG_HIS                                           */
 /*==============================================================*/
 create table SYS_LOG_HIS
 (
-   LOG_ID               int(16) not null auto_increment comment 'ÏµÍ³ÈÕÖ¾ID',
-   LOG_TYPE             tinyint(2) comment 'ÈÕÖ¾ÀàÐÍ£º1-ÒµÎñÈÕÖ¾£¨Ó¦ÓÃÖ÷¶¯¼ÇÂ¼µÄÒµÎñÐÅÏ¢£© 2-²Ù×÷ÈÕÖ¾£¨×Ô¶¯¼ÇÂ¼µÄµã»÷ÈÕÖ¾£© 3-ÒµÎñ²Ù×÷ÈÕÖ¾£¨ºÏ²¢Á½ÖÖÈÕÖ¾ÀàÐÍ£©',
-   OP_TYPE              tinyint(2) comment '²Ù×÷ÀàÐÍ£º11-µÇÂ¼ 12-ÍË³ö   21-²éÑ¯£¨²é¿´£© 22-Ôö¼Ó 23-ÐÞ¸Ä 24-É¾³ý 25-µ¼Èë£¨ÉÏ´«£© 26-µ¼³ö£¨ÏÂÔØ£©27-ÉóÅú 28-ËÑË÷ 29-ËÑË÷½á¹û²é¿´',
-   RSLT_TYPE            tinyint(2) comment '½á¹ûÀàÐÍ£º0-³É¹¦ 1-Ê§°Ü£¨²ÎÊýÎª¿ÕµÈ£© 2-Òì³£',
-   SRC_TYPE             tinyint(2) comment 'À´Ô´ÀàÐÍ£º1-±¾ÏµÍ³ 2-ÍâÏµÍ³',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   OP_NAME              varchar(200) comment '²Ù×÷Ô±ÐÕÃû',
-   ORG_ID               int(16) comment '×éÖ¯ID',
-   ORG_NAME             varchar(200) comment '×éÖ¯Ãû³Æ',
-   AGENT_FLAG           tinyint(2) comment '´úÀí±êÖ¾£º1-´úÀí 0-·Ç´úÀí',
-   AGENT_OP_ID          int(16) comment '´úÀí²Ù×÷Ô±ID',
-   AGENT_OP_NAME        varchar(200) comment '´úÀí²Ù×÷Ô±ÐÕÃû',
-   OPRT_START_TIME      timestamp default '0000-00-00 00:00:00' comment '²Ù×÷¿ªÊ¼Ê±¼ä',
-   OPRT_END_TIME        timestamp default '0000-00-00 00:00:00' comment '²Ù×÷½áÊøÊ±¼ä',
-   OPRT_INTERVAL        int(16) comment '²Ù×÷Ê±³¤£¨Ãë£©',
-   OPRT_NAME            varchar(200) comment '²Ù×÷Ãû³Æ',
-   OPRT_DESC            varchar(2000) comment '²Ù×÷ËµÃ÷',
-   OPRT_URL             varchar(400) comment '²Ù×÷URL',
-   OPRT_PARAM           varchar(400) comment '²Ù×÷²ÎÊý',
-   OPRT_CONTENT         varchar(2000) comment '²Ù×÷ÄÚÈÝ£¨²åÈëÐÞ¸ÄÉ¾³ý²Ù×÷µÄÊôÐÔÖµ¡¢ËÑË÷¹Ø¼ü×ÖµÈ£©',
-   SERVER_ADDRESS       varchar(20) comment '·þÎñ¶ËIPµØÖ·',
-   IP_ADDRESS           varchar(30) comment 'IPµØÖ·',
-   SESSION_ID           varchar(200) comment '»á»°ID',
-   CONNECT_TYPE         tinyint(2) comment '½ÓÈë·½Ê½£º1-WEB½ÓÈë 2-ÊÖ»ú½ÓÈë',
-   MOBILE_NO            varchar(20) comment 'ÊÖ»úºÅ',
-   FUNC_ID              int(16) comment '¹¦ÄÜID',
-   FUNC_NAME            varchar(200) comment '¹¦ÄÜÃû³Æ',
-   FUNC_TYPE            tinyint(2) comment '¹¦ÄÜÀà±ð£º1-²Ëµ¥ 2-Ò³Ãæ 3-°´Å¥ 4-¹¤×÷Ì¨ 5-×é¼þ',
-   OP_OBJ_TYPE          int(6) comment '²Ù×÷¶ÔÏóÀàÐÍ£¨²Ù×÷µÄÒµÎñ¶ÔÏóÀàÐÍ£º1-ÐèÇó 2-±¨±í 3-ÎÄµµ 4-Ö¸±ê 5-ÖªÊ¶¿â 6-±¨±íÊµÀý 7-ÐèÇó¸½¼þ £©',
-   OP_OBJ_ID            int(200) comment '²Ù×÷¶ÔÏóID£¨ÐèÇóID¡¢±¨±íID¡¢±¨±íÊµÀýID¡¢Ö¸±êIDµÈ¡¢ÐèÇó¸½¼þID£©',
-   OP_OBJ_NAME          varchar(200) comment '²Ù×÷¶ÔÏóÃû³Æ£¨ÐèÇóÃû³Æ¡¢±¨±íÃû³Æ¡¢±¨±íÊµÀýÃû³Æ¡¢Ö¸±êÃû³Æ¡¢ÐèÇó¸½¼þÎÄµµÃû³Æ£©',
-   OP_ENT_NAME          varchar(200) comment '²Ù×÷ÊµÌåÃû³Æ£¨²Ù×÷ÊµÌå±íÃû³Æ£©',
-   OP_ENT_SQL           varchar(2000) comment '²Ù×÷ÊµÌåSQLÓï¾ä£¨ÍêÕûSQLÓï¾ä£©',
-   OP_ENT_CLAUSE        varchar(800) comment '²Ù×÷ÊµÌåÌõ¼þ×Ó¾ä£¨È·¶¨Êý¾Ý¼ÇÂ¼µÄ±êÊ¶Ìõ¼þ£©',
+   LOG_ID               int(16) not null auto_increment comment 'ÏµÍ³ï¿½ï¿½Ö¾ID',
+   LOG_TYPE             tinyint(2) comment 'ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Í£ï¿½1-Òµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Â¼ï¿½Äµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ 3-Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Í£ï¿½',
+   OP_TYPE              tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½11-ï¿½ï¿½Â¼ 12-ï¿½Ë³ï¿½   21-ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½é¿´ï¿½ï¿½ 22-ï¿½ï¿½ï¿½ï¿½ 23-ï¿½Þ¸ï¿½ 24-É¾ï¿½ï¿½ 25-ï¿½ï¿½ï¿½ë£¨ï¿½Ï´ï¿½ï¿½ï¿½ 26-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½27-ï¿½ï¿½ï¿½ï¿½ 28-ï¿½ï¿½ï¿½ï¿½ 29-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¿´',
+   RSLT_TYPE            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-ï¿½É¹ï¿½ 1-Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ÕµÈ£ï¿½ 2-ï¿½ì³£',
+   SRC_TYPE             tinyint(2) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ÏµÍ³ 2-ï¿½ï¿½ÏµÍ³',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   OP_NAME              varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   ORG_ID               int(16) comment 'ï¿½ï¿½Ö¯ID',
+   ORG_NAME             varchar(200) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½',
+   AGENT_FLAG           tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½1-ï¿½ï¿½ï¿½ï¿½ 0-ï¿½Ç´ï¿½ï¿½ï¿½',
+   AGENT_OP_ID          int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   AGENT_OP_NAME        varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   OPRT_START_TIME      timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Ê±ï¿½ï¿½',
+   OPRT_END_TIME        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   OPRT_INTERVAL        int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ë£©',
+   OPRT_NAME            varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OPRT_DESC            varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½',
+   OPRT_URL             varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½URL',
+   OPRT_PARAM           varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OPRT_CONTENT         varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ÖµÈ£ï¿½',
+   SERVER_ADDRESS       varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·',
+   IP_ADDRESS           varchar(30) comment 'IPï¿½ï¿½Ö·',
+   SESSION_ID           varchar(200) comment 'ï¿½á»°ID',
+   CONNECT_TYPE         tinyint(2) comment 'ï¿½ï¿½ï¿½ë·½Ê½ï¿½ï¿½1-WEBï¿½ï¿½ï¿½ï¿½ 2-ï¿½Ö»ï¿½ï¿½ï¿½ï¿½',
+   MOBILE_NO            varchar(20) comment 'ï¿½Ö»ï¿½ï¿½',
+   FUNC_ID              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   FUNC_NAME            varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   FUNC_TYPE            tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1-ï¿½Ëµï¿½ 2-Ò³ï¿½ï¿½ 3-ï¿½ï¿½Å¥ 4-ï¿½ï¿½ï¿½ï¿½Ì¨ 5-ï¿½ï¿½ï¿½',
+   OP_OBJ_TYPE          int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ 3-ï¿½Äµï¿½ 4-Ö¸ï¿½ï¿½ 5-ÖªÊ¶ï¿½ï¿½ 6-ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ 7-ï¿½ï¿½ï¿½ó¸½¼ï¿½ ï¿½ï¿½',
+   OP_OBJ_ID            int(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½IDï¿½ï¿½Ö¸ï¿½ï¿½IDï¿½È¡ï¿½ï¿½ï¿½ï¿½ó¸½¼ï¿½IDï¿½ï¿½',
+   OP_OBJ_NAME          varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Æ¡ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ó¸½¼ï¿½ï¿½Äµï¿½ï¿½ï¿½Æ£ï¿½',
+   OP_ENT_NAME          varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½',
+   OP_ENT_SQL           varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½SQLï¿½ï¿½ä£¨ï¿½ï¿½ï¿½ï¿½SQLï¿½ï¿½ä£©',
+   OP_ENT_CLAUSE        varchar(800) comment 'ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ä£¨È·ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½Â¼ï¿½Ä±ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
    EXT_DATE_01          timestamp default '0000-00-00 00:00:00',
    EXT_DATE_02          timestamp default '0000-00-00 00:00:00',
    EXT_NUM_01           int(16),
@@ -584,28 +584,28 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_LOG_HIS comment '¼ÇÂ¼ÏµÍ³ÈÕÖ¾µÄÀúÊ·Êý¾ÝÐÅÏ¢£¨°Ñ¹ýÆÚµÄÈÕÖ¾Êý¾Ý´ÓÏµÍ³ÈÕÖ¾±í×ªÒÆµ½´Ë±í£©';
+alter table SYS_LOG_HIS comment 'ï¿½ï¿½Â¼ÏµÍ³ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½Úµï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ý´ï¿½ÏµÍ³ï¿½ï¿½Ö¾ï¿½ï¿½×ªï¿½Æµï¿½ï¿½Ë±?';
 
 /*==============================================================*/
 /* Table: SYS_NOTIFY                                            */
 /*==============================================================*/
 create table SYS_NOTIFY
 (
-   NOTIFY_ID            int(16) not null auto_increment comment '¹«¸æID',
-   NOTIFY_TITLE         varchar(200) comment '¹«¸æ±êÌâ',
-   NOTIFY_CONTENT       varchar(2000) comment '¹«¸æÄÚÈÝ',
-   NOTIFY_OBJ           varchar(200) comment '¹«¸æ¶ÔÏó£¨Èç¹«¸æËùÊôµØÊÐ¡¢²¿ÃÅ£©',
-   NOTIFY_TYPE          tinyint(2) comment '¹«¸æÀàÐÍ£º1-¹«¸æÍ¨ÖªÀà 2-¹«¹²×ÊÁÏÀà 3-×îÐÂ¶¯Ì¬Àà 4-ÖªÊ¶¿â¹«¸æ',
-   NOTIFY_DTL_TYPE      int(6) comment '¹«¸æÃ÷Ï¸ÀàÐÍ',
-   NOTIFY_RANGE         tinyint(2) comment '¹«¸æ·¶Î§£º0-È«²¿ 1-Ö¸¶¨·¶Î§',
-   NOTIFY_STATE         tinyint(2) comment '¹«¸æ×´Ì¬£º-1-Î´·¢²¼£¨²Ý¸å£© 1-ÉúÐ§£¨·¢²¼£© 0-Ê§Ð§',
-   EFF_DATE             timestamp default '0000-00-00 00:00:00' comment 'ÉúÐ§Ê±¼ä',
-   EXP_DATE             timestamp default '0000-00-00 00:00:00' comment 'Ê§Ð§Ê±¼ä',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   NOTIFY_ID            int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   NOTIFY_TITLE         varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   NOTIFY_CONTENT       varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   NOTIFY_OBJ           varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç¹«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Å£ï¿½',
+   NOTIFY_TYPE          tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3-ï¿½ï¿½ï¿½Â¶ï¿½Ì¬ï¿½ï¿½ 4-ÖªÊ¶ï¿½â¹«ï¿½ï¿½',
+   NOTIFY_DTL_TYPE      int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½',
+   NOTIFY_RANGE         tinyint(2) comment 'ï¿½ï¿½ï¿½æ·¶Î§ï¿½ï¿½0-È«ï¿½ï¿½ 1-Ö¸ï¿½ï¿½ï¿½ï¿½Î§',
+   NOTIFY_STATE         tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½-1-Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸å£© 1-ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0-Ê§Ð§',
+   EFF_DATE             timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   EXP_DATE             timestamp default '0000-00-00 00:00:00' comment 'Ê§Ð§Ê±ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (NOTIFY_ID)
 )
 auto_increment = 10000
@@ -616,18 +616,18 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_NOTIFY comment '¼ÇÂ¼¹ÜÀíÔ±·¢²¼µÄÏµÍ³¹«¸æ¡¢×îÐÂ¶¯Ì¬µÈÐÅÏ¢';
+alter table SYS_NOTIFY comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½æ¡¢ï¿½ï¿½ï¿½Â¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_NOTIFY_ACCEPT                                     */
 /*==============================================================*/
 create table SYS_NOTIFY_ACCEPT
 (
-   NOTIFY_ID            int(16) not null auto_increment comment '¹«¸æID',
-   NOTIFY_ACCEPT_OP_ID  int(16) not null comment '¹«¸æ½ÓÊÕÈËID',
-   READ_STATE           tinyint(2) comment 'ÔÄ¶Á×´Ì¬£º0-Î´¶Á 1-ÒÑ¶Á',
-   READ_DATE            timestamp default '0000-00-00 00:00:00' comment 'ÔÄ¶ÁÊ±¼ä',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
+   NOTIFY_ID            int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   NOTIFY_ACCEPT_OP_ID  int(16) not null comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   READ_STATE           tinyint(2) comment 'ï¿½Ä¶ï¿½×´Ì¬ï¿½ï¿½0-Î´ï¿½ï¿½ 1-ï¿½Ñ¶ï¿½',
+   READ_DATE            timestamp default '0000-00-00 00:00:00' comment 'ï¿½Ä¶ï¿½Ê±ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
    primary key (NOTIFY_ID, NOTIFY_ACCEPT_OP_ID)
 )
 auto_increment = 10000
@@ -638,26 +638,26 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_NOTIFY_ACCEPT comment '¼ÇÂ¼¹«¸æµÄ½ÓÊÕÐÅÏ¢';
+alter table SYS_NOTIFY_ACCEPT comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_NOTIFY_ATTACH                                     */
 /*==============================================================*/
 create table SYS_NOTIFY_ATTACH
 (
-   NOTIFY_ATTACH_ID     int(16) not null auto_increment comment '¹«¸æ¸½¼þID',
-   NOTIFY_ID            int(16) comment '¹«¸æID',
-   NOTIFY_ATTACH_TYPE   tinyint(2) comment '¹«¸æ¸½¼þÀàÐÍ£º0-¹«ÓÃ×ÊÁÏ 1-Ñ§Ï°×ÊÁÏ 2-Ã½ÌåÍ¶·ÅÎï 3-ÏµÍ³°ïÖú',
-   NOTIFY_ATTACH_PATH   varchar(200) comment '¹«¸æ¸½¼þÂ·¾¶£¨´æ´¢Â·¾¶£©',
-   NOTIFY_ATTACH_NAME   varchar(200) comment '¹«¸æ¸½¼þÎÄ¼þÃû£¨´æ´¢ÎÄ¼þÃû£©',
-   NOTIFY_ATTACH_DISP_NAME varchar(200) comment '¹«¸æ¸½¼þÏÔÊ¾ÎÄ¼þÃû',
-   NOTIFY_ATTACH_DESC   varchar(800) comment '¹«¸æ¸½¼þËµÃ÷',
-   NOTIFY_ATTACH_STATE  tinyint(2) comment '¹«¸æ¸½¼þ×´Ì¬£º1-ÉúÐ§ 0-Ê§Ð§',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   NOTIFY_ATTACH_ID     int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½ID',
+   NOTIFY_ID            int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   NOTIFY_ATTACH_TYPE   tinyint(2) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1-Ñ§Ï°ï¿½ï¿½ï¿½ï¿½ 2-Ã½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï¿½ 3-ÏµÍ³ï¿½ï¿½ï¿½ï¿½',
+   NOTIFY_ATTACH_PATH   varchar(200) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢Â·ï¿½ï¿½ï¿½ï¿½',
+   NOTIFY_ATTACH_NAME   varchar(200) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½æ´¢ï¿½Ä¼ï¿½ï¿½ï¿½',
+   NOTIFY_ATTACH_DISP_NAME varchar(200) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ä¼ï¿½ï¿½ï¿½',
+   NOTIFY_ATTACH_DESC   varchar(800) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½Ëµï¿½ï¿½',
+   NOTIFY_ATTACH_STATE  tinyint(2) comment 'ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½Ð§ 0-Ê§Ð§',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (NOTIFY_ATTACH_ID)
 )
 auto_increment = 10000
@@ -668,22 +668,22 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_NOTIFY_ATTACH comment '¼ÇÂ¼¹«¸æ¸½¼þÐÅÏ¢';
+alter table SYS_NOTIFY_ATTACH comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½æ¸½ï¿½ï¿½ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_NOTIFY_RANGE                                      */
 /*==============================================================*/
 create table SYS_NOTIFY_RANGE
 (
-   NOTIFY_ID            int(16) not null auto_increment comment '¹«¸æID',
-   NOTIFY_RANGE_TYPE    tinyint(2) not null comment '¹«¸æ·¶Î§ÀàÐÍ£º1-×éÖ¯ 2-Ô±¹¤',
-   NOTIFY_RANGE_OBJ_ID  int(16) not null comment '¹«¸æ·¶Î§¶ÔÏóID£¨°´¹«¸æ·¶Î§ÀàÐÍ¼ÇÂ¼×éÖ¯ID»ò²Ù×÷Ô±ID£©',
-   NOTIFY_ORG_EFF_TYPE  tinyint(2) comment '¹«¸æ×éÖ¯×÷ÓÃÀàÐÍ£º0-Ö»¶ÔÓ¦±¾¼¶×éÖ¯ 1-°üº¬¸÷ÏÂ¼¶×éÖ¯',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   NOTIFY_ID            int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   NOTIFY_RANGE_TYPE    tinyint(2) not null comment 'ï¿½ï¿½ï¿½æ·¶Î§ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½Ö¯ 2-Ô±ï¿½ï¿½',
+   NOTIFY_RANGE_OBJ_ID  int(16) not null comment 'ï¿½ï¿½ï¿½æ·¶Î§ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ·¶Î§ï¿½ï¿½ï¿½Í¼ï¿½Â¼ï¿½ï¿½Ö¯IDï¿½ï¿½ï¿½ï¿½ï¿½Ô±IDï¿½ï¿½',
+   NOTIFY_ORG_EFF_TYPE  tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-Ö»ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ 1-ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ö¯',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (NOTIFY_ID, NOTIFY_RANGE_TYPE, NOTIFY_RANGE_OBJ_ID)
 )
 auto_increment = 10000
@@ -694,74 +694,74 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_NOTIFY_RANGE comment '¼ÇÂ¼¹«¸æ·¢²¼µÄ·¶Î§ÐÅÏ¢£¨ÄÜ½ÓÊÕ¹«¸æµÄ×éÖ¯¡¢Ô±¹¤£©';
+alter table SYS_NOTIFY_RANGE comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½æ·¢ï¿½ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ü½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OP                                                */
 /*==============================================================*/
 create table SYS_OP
 (
-   OP_ID                int(16) not null auto_increment comment '²Ù×÷Ô±ID',
-   OP_NAME              varchar(20) comment '²Ù×÷Ô±ÐÕÃû',
-   OP_CODE              varchar(30) comment '²Ù×÷Ô±±àÂë',
-   MOBILE_NO            varchar(20) comment 'ÊÖ»úºÅ',
-   EMAIL_ADRESS         varchar(40) comment 'µç×ÓÓÊ¼þµØÖ·',
-   OP_LEVEL             tinyint(2) comment '²Ù×÷Ô±¼¶±ð£º1-Ò»¼¶£¨ÕýÖ÷¹Ü£© 2-¶þ¼¶£¨¸±Ö÷¹Ü£©  9-ÆÕÍ¨Ô±¹¤',
-   SUP_OP_ID            int(16) comment 'ÉÏ¼¶²Ù×÷Ô±ID',
-   LOGIN_CODE           varchar(30) comment 'µÇÂ¼¹¤ºÅ',
-   LOGIN_PASSWD         varchar(80) comment 'µÇÂ¼ÃÜÂë',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   SHORT_NAME           varchar(200) comment '¼ò³Æ',
-   ENGLISH_NAME         varchar(200) comment 'Ó¢ÎÄÃû',
-   CARD_TYPE_ID         tinyint(2) comment 'Ö¤¼þÀàÐÍ£º1-Éí·ÝÖ¤ 2-¾ü¹ÙÖ¤ 3-ÆäËû,¶ÔÓ¦sys_static_data±ícode_type=40108',
-   CARD_NO              varchar(40) comment 'Ö¤¼þºÅÂë',
-   BIRTHDAY             date comment 'ÉúÈÕ',
-   MARRY_STATUS         tinyint(2) comment '»éÒö×´¿ö£º1-Î´»é 2-ÒÑ»é,¶ÔÓ¦sys_static_data±ícode_type=10101',
-   GENDER               tinyint(2) comment 'ÐÔ±ð£º1-ÄÐ 2-Å®,¶ÔÓ¦sys_static_data±ícode_type=40107',
-   RELIGION             tinyint(2) comment '×Ú½ÌÐÅÑö',
-   NATIONAL_TYPE        tinyint(2) comment 'Ãñ×å',
-   EDUCATION_LEVEL      tinyint(2) comment 'Ñ§Àú',
-   INCOME_LEVEL         tinyint(2) comment 'ÊÕÈë',
-   POLITICS_FACE        tinyint(2) comment 'ÕþÖÎÃæÃ²',
+   OP_ID                int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   OP_NAME              varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   OP_CODE              varchar(30) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   MOBILE_NO            varchar(20) comment 'ï¿½Ö»ï¿½ï¿½',
+   EMAIL_ADRESS         varchar(40) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ö·',
+   OP_LEVEL             tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½1-Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½  9-ï¿½ï¿½Í¨Ô±ï¿½ï¿½',
+   SUP_OP_ID            int(16) comment 'ï¿½Ï¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   LOGIN_CODE           varchar(30) comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½',
+   LOGIN_PASSWD         varchar(80) comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   SHORT_NAME           varchar(200) comment 'ï¿½ï¿½ï¿½',
+   ENGLISH_NAME         varchar(200) comment 'Ó¢ï¿½ï¿½ï¿½ï¿½',
+   CARD_TYPE_ID         tinyint(2) comment 'Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½Ö¤ 2-ï¿½ï¿½ï¿½Ö¤ 3-ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ó¦sys_static_dataï¿½ï¿½code_type=40108',
+   CARD_NO              varchar(40) comment 'Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   BIRTHDAY             date comment 'ï¿½ï¿½ï¿½ï¿½',
+   MARRY_STATUS         tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½1-Î´ï¿½ï¿½ 2-ï¿½Ñ»ï¿½,ï¿½ï¿½Ó¦sys_static_dataï¿½ï¿½code_type=10101',
+   GENDER               tinyint(2) comment 'ï¿½Ô±ï¿½1-ï¿½ï¿½ 2-Å®,ï¿½ï¿½Ó¦sys_static_dataï¿½ï¿½code_type=40107',
+   RELIGION             tinyint(2) comment 'ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   NATIONAL_TYPE        tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½',
+   EDUCATION_LEVEL      tinyint(2) comment 'Ñ§ï¿½ï¿½',
+   INCOME_LEVEL         tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½',
+   POLITICS_FACE        tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²',
    JOB_POSITION         varchar(40) comment 'Ö°Î»',
-   JOB_COMPANY          varchar(400) comment '¹¤×÷µ¥Î»',
-   JOB_DESC             varchar(400) comment 'Ö°ÔðËµÃ÷',
-   OFFICE_TEL           varchar(20) comment '°ì¹«µç»°',
-   FAX_ID               varchar(20) comment '´«ÕæºÅ',
-   HOME_TEL             varchar(20) comment '¼ÒÍ¥µç»°',
-   WIRELESS_CALL        varchar(20) comment 'ÎÞÏÞÑ°ºô',
-   ALARM_MOBILE_NO      varchar(20) comment '¸æ¾¯ÊÖ»úºÅ',
-   FAMILY_INFO          varchar(200) comment 'Ç×ÊôÐÅÏ¢',
-   CONTACT_ADDRESS      varchar(80) comment 'ÁªÏµµØÖ·',
-   POSTAL_CODE          int(6) comment 'ÓÊÕþ±àÂë',
-   SECURITY_ID          varchar(30) comment 'Éç±£¿¨ºÅ',
-   CAR_NO               varchar(40) comment '³µÅÆºÅÂë',
-   CHARACTER_DESC       varchar(200) comment 'ÐÔ¸ñÌØµã',
-   NOTES                varchar(800) comment '±¸×¢',
-   RECENT_PASSWORD      varchar(400) comment '×î½üÊ¹ÓÃÃÜÂë',
-   RECENT_PASS_TIMES    tinyint(2) comment '×î½üÊ¹ÓÃÃÜÂë´ÎÊý',
-   MIN_PASSWD_LENGTH    tinyint(2) comment '×îÐ¡ÃÜÂë³¤¶È',
-   ALLOW_CHANGE_PASSWD  tinyint(2) comment 'ÊÇ·ñÔÊÐíÐÞ¸ÄÃÜÂë£º1-ÔÊÐí 0-²»ÔÊÐí',
-   ACCT_EFFECT_DATE     timestamp default '0000-00-00 00:00:00' comment 'ÕËºÅÉúÐ§ÈÕÆÚ',
-   ACCT_EXPIRE_DATE     timestamp default '0000-00-00 00:00:00' comment 'ÕËºÅÊ§Ð§ÈÕÆÚ',
-   MULTI_LOGIN_FLAG     tinyint(2) comment '¶àÖØµÇÂ¼±êÖ¾£º1-ÔÊÐí 0-²»ÔÊÐí',
-   LAST_LOGIN_LOG_ID    int(16) comment '×îºóÒ»´ÎµÇÂ¼ÈÕÖ¾',
-   TRY_TIMES            int(6) comment 'µÇÂ¼³¢ÊÔ´ÎÊý',
-   LOCK_FLAG            tinyint(2) comment 'Ëø¶¨±êÖ¾£º0-Î´Ëø¶¨ 1-Ëø¶¨',
-   LOGIN_FLAG           tinyint(2) comment 'µÇÂ¼±êÖ¾£º0-Î´µÇÂ¼ 1-ÒÑµÇÂ¼',
-   SUPER_USER_FLAG      tinyint(2) comment '³¬¼¶ÓÃ»§±êÖ¾£º0-·ñ 1-ÊÇ',
-   PASSWD_VALID_DAYS    int(10) comment 'ÃÜÂëÓÐÐ§ÆÚ£¨ÒÔÌìÎªµ¥Î»£©',
-   CANCEL_DAYS          int(6) comment 'Í£Ö¹Ê±ÏÞ£¨ÒÔÌìÎªµ¥Î»£©,Èç¹ûµ½ÁËÃÜÂëÐÞ¸ÄÊ±£¬µÇÂ½ÓÃ»§»¹Î´ÐÞ¸ÄÃÜÂë£¬Ôò¹ýÁË¡°Í£Ö¹Ê±ÏÞ¡±ºó£¬¸Ã¹¤ºÅ±»Ç¿ÖÆ»ØÊÕ£¬³ý·ÇÓÃ»§ÓÖÐÞ¸ÄÁËÃÜÂë£¬²Å¿ÉÒÔÔÙ¼ÌÐøÊ¹ÓÃ¡£',
-   PASSWORD_VALID_DATE  timestamp default '0000-00-00 00:00:00' comment 'ÃÜÂëÉúÐ§Ê±¼ä',
-   CHG_PASSWD_ALARM_DAYS tinyint(2) comment 'ÃÜÂë¹ýÆÚÌáÇ°Í¨Öª',
-   SMS_CHK_PASSWD       varchar(20) comment '¶ÌÐÅÐ£ÑéÃÜÂë',
-   CHKPW_EFFECT_TIME    timestamp default '0000-00-00 00:00:00' comment 'Ð£ÑéÃÜÂëÉúÐ§Ê±¼ä',
-   CHKPW_EXPIRE_TIME    timestamp default '0000-00-00 00:00:00' comment 'Ð£ÑéÃÜÂëÊ§Ð§Ê±¼ä',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   JOB_COMPANY          varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»',
+   JOB_DESC             varchar(400) comment 'Ö°ï¿½ï¿½Ëµï¿½ï¿½',
+   OFFICE_TEL           varchar(20) comment 'ï¿½ì¹«ï¿½ç»°',
+   FAX_ID               varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
+   HOME_TEL             varchar(20) comment 'ï¿½ï¿½Í¥ï¿½ç»°',
+   WIRELESS_CALL        varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½',
+   ALARM_MOBILE_NO      varchar(20) comment 'ï¿½æ¾¯ï¿½Ö»ï¿½ï¿½',
+   FAMILY_INFO          varchar(200) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢',
+   CONTACT_ADDRESS      varchar(80) comment 'ï¿½ï¿½Ïµï¿½ï¿½Ö·',
+   POSTAL_CODE          int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   SECURITY_ID          varchar(30) comment 'ï¿½ç±£ï¿½ï¿½ï¿½ï¿½',
+   CAR_NO               varchar(40) comment 'ï¿½ï¿½ï¿½Æºï¿½ï¿½ï¿½',
+   CHARACTER_DESC       varchar(200) comment 'ï¿½Ô¸ï¿½ï¿½Øµï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   RECENT_PASSWORD      varchar(400) comment 'ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   RECENT_PASS_TIMES    tinyint(2) comment 'ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   MIN_PASSWD_LENGTH    tinyint(2) comment 'ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ë³¤ï¿½ï¿½',
+   ALLOW_CHANGE_PASSWD  tinyint(2) comment 'ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ë£º1-ï¿½ï¿½ï¿½ï¿½ 0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   ACCT_EFFECT_DATE     timestamp default '0000-00-00 00:00:00' comment 'ï¿½Ëºï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½',
+   ACCT_EXPIRE_DATE     timestamp default '0000-00-00 00:00:00' comment 'ï¿½Ëºï¿½Ê§Ð§ï¿½ï¿½ï¿½ï¿½',
+   MULTI_LOGIN_FLAG     tinyint(2) comment 'ï¿½ï¿½ï¿½Øµï¿½Â¼ï¿½ï¿½Ö¾ï¿½ï¿½1-ï¿½ï¿½ï¿½ï¿½ 0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   LAST_LOGIN_LOG_ID    int(16) comment 'ï¿½ï¿½ï¿½Ò»ï¿½Îµï¿½Â¼ï¿½ï¿½Ö¾',
+   TRY_TIMES            int(6) comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½',
+   LOCK_FLAG            tinyint(2) comment 'ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½0-Î´ï¿½ï¿½ 1-ï¿½ï¿½',
+   LOGIN_FLAG           tinyint(2) comment 'ï¿½ï¿½Â¼ï¿½ï¿½Ö¾ï¿½ï¿½0-Î´ï¿½ï¿½Â¼ 1-ï¿½Ñµï¿½Â¼',
+   SUPER_USER_FLAG      tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½0-ï¿½ï¿½ 1-ï¿½ï¿½',
+   PASSWD_VALID_DAYS    int(10) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½',
+   CANCEL_DAYS          int(6) comment 'Í£Ö¹Ê±ï¿½Þ£ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ã»ï¿½ï¿½ï¿½Î´ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½Í£Ö¹Ê±ï¿½Þ¡ï¿½ï¿½ó£¬¸Ã¹ï¿½ï¿½Å±ï¿½Ç¿ï¿½Æ»ï¿½ï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½Å¿ï¿½ï¿½ï¿½ï¿½Ù¼ï¿½ï¿½ï¿½Ê¹ï¿½Ã¡ï¿½',
+   PASSWORD_VALID_DATE  timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   CHG_PASSWD_ALARM_DAYS tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Í¨Öª',
+   SMS_CHK_PASSWD       varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CHKPW_EFFECT_TIME    timestamp default '0000-00-00 00:00:00' comment 'Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   CHKPW_EXPIRE_TIME    timestamp default '0000-00-00 00:00:00' comment 'Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§Ð§Ê±ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_ID)
 )
 auto_increment = 10000
@@ -772,22 +772,22 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP comment '¼ÇÂ¼Ô±¹¤¼°²Ù×÷Ô±ÐÅÏ¢£¨Ô±¹¤ÐÕÃû¡¢µç»°µÈ×ÔÈ»ÐÅÏ¢¼°²Ù×÷Ô±¹¤ºÅ¡¢ÃÜÂëµÈÏµÍ³ÐÅÏ¢£©';
+alter table SYS_OP comment 'ï¿½ï¿½Â¼Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ï¢ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç»°ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Å¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ï¢ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OPRT_TYPE                                         */
 /*==============================================================*/
 create table SYS_OPRT_TYPE
 (
-   OPRT_TYPE_ID         int(16) not null auto_increment comment '²Ù×÷ÀàÐÍID',
-   OPRT_TYPE_NAME       varchar(80) comment '²Ù×÷ÀàÐÍÃû³Æ',
-   OPRT_TYPE_DESC       varchar(400) comment '²Ù×÷ÀàÐÍÃèÊö',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OPRT_TYPE_ID         int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   OPRT_TYPE_NAME       varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OPRT_TYPE_DESC       varchar(400) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OPRT_TYPE_ID)
 )
 auto_increment = 10000
@@ -798,24 +798,24 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OPRT_TYPE comment '¶¨ÒåÏµÍ³²Ù×÷ÀàÐÍ£¬ÈçÔö¼Ó¡¢ÐÞ¸Ä¡¢É¾³ý¡¢²éÑ¯¡¢ÉóÅú
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_OPRT_TYPE comment 'ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½Þ¸Ä¡ï¿½É¾ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_OP_AGENT_RLT                                      */
 /*==============================================================*/
 create table SYS_OP_AGENT_RLT
 (
-   OP_AGENT_RLT_ID      int(16) not null auto_increment comment '²Ù×÷Ô±´úÀí¹ØÏµID',
-   OP_A_ID              int(16) comment 'A²Ù×÷Ô±ID',
-   OP_B_ID              int(16) comment 'B²Ù×÷Ô±ID',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_AGENT_RLT_ID      int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ÏµID',
+   OP_A_ID              int(16) comment 'Aï¿½ï¿½ï¿½ï¿½Ô±ID',
+   OP_B_ID              int(16) comment 'Bï¿½ï¿½ï¿½ï¿½Ô±ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_AGENT_RLT_ID)
 )
 auto_increment = 10000
@@ -826,32 +826,32 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_AGENT_RLT comment '¼ÇÂ¼²Ù×÷Ô±´úÀí¹ØÏµÐÅÏ¢£¨´úÀí²Ù×÷Ô±Óë±»´úÀí²Ù×÷Ô±¶ÔÓ¦¹ØÏµ£¬¼´AB¾­Àí¶ÔÓ¦¹ØÏµ£©';
+alter table SYS_OP_AGENT_RLT comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ABï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ïµï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OP_DATA_AUTH                                      */
 /*==============================================================*/
 create table SYS_OP_DATA_AUTH
 (
-   OP_DATA_AUTH_ID      int(16) not null auto_increment comment '²Ù×÷Ô±Êý¾ÝÈ¨ÏÞID',
-   FUNC_ID              int(16) comment '¹¦ÄÜID',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   DATA_AUTH_TYPE_ID    int(16) comment 'Êý¾ÝÈ¨ÏÞÀàÐÍID',
-   ROLE_ID              int(16) comment '½ÇÉ«ID',
-   DATA_AUTH_OBJ_ID     varchar(40) comment 'Êý¾ÝÈ¨ÏÞ¶ÔÏóID£¨°´²»Í¬Êý¾ÝÈ¨ÏÞÀàÐÍ¼ÇÂ¼ÏàÓ¦×éÖ¯ID¡¢²Ù×÷Ô±ID¡¢²úÆ·IDµÈ£©',
-   DATA_AUTH_OBJ_NAME   varchar(400) comment 'Êý¾ÝÈ¨ÏÞ¶ÔÏóÃû³Æ',
-   OP_DATA_AUTH_TYPE    tinyint(2) comment '²Ù×÷Ô±Êý¾ÝÈ¨ÏÞÀàÐÍ£º1-Ô±¹¤Êý¾ÝÈ¨ÏÞ£¨²»¹ØÁªÏµÍ³¹¦ÄÜ£© 2-Ô±¹¤¹¦ÄÜÊý¾ÝÈ¨ÏÞ£¨¹ØÁªÏµÍ³¹¦ÄÜ£©',
-   DATA_AUTH_RULE_TYPE  tinyint(2) comment 'Êý¾ÝÈ¨ÏÞ¹æÔòÀàÐÍ£º1-×ÔÉíÊý¾ÝÈ¨ÏÞ 2-×ÔÉí¼°ÏÂ¼¶Êý¾ÝÈ¨ÏÞ',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   EFF_DATE             timestamp default '0000-00-00 00:00:00' comment 'ÉúÐ§Ê±¼ä',
-   EXP_DATE             timestamp default '0000-00-00 00:00:00' comment 'Ê§Ð§Ê±¼ä',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_DATA_AUTH_ID      int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½È¨ï¿½ï¿½ID',
+   FUNC_ID              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   DATA_AUTH_TYPE_ID    int(16) comment 'ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID',
+   ROLE_ID              int(16) comment 'ï¿½ï¿½É«ID',
+   DATA_AUTH_OBJ_ID     varchar(40) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¶ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Â¼ï¿½ï¿½Ó¦ï¿½ï¿½Ö¯IDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±IDï¿½ï¿½ï¿½ï¿½Æ·IDï¿½È£ï¿½',
+   DATA_AUTH_OBJ_NAME   varchar(400) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   OP_DATA_AUTH_TYPE    tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-Ô±ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ü£ï¿½ 2-Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ£ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ü£ï¿½',
+   DATA_AUTH_RULE_TYPE  tinyint(2) comment 'ï¿½ï¿½ï¿½È¨ï¿½Þ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ 2-ï¿½ï¿½ï¿½?ï¿½Â¼ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   EFF_DATE             timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   EXP_DATE             timestamp default '0000-00-00 00:00:00' comment 'Ê§Ð§Ê±ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_DATA_AUTH_ID)
 )
 auto_increment = 10000
@@ -862,30 +862,30 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_DATA_AUTH comment '¼ÇÂ¼²Ù×÷Ô±×ÔÉí»ò¶ÔÄ³ÏµÍ³¹¦ÄÜµÄ·ÇÈ±Ê¡¹æÔòµÄÊý¾ÝÈ¨ÏÞ';
+alter table SYS_OP_DATA_AUTH comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ÏµÍ³ï¿½ï¿½ï¿½ÜµÄ·ï¿½È±Ê¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OP_JOBFUNC                                        */
 /*==============================================================*/
 create table SYS_OP_JOBFUNC
 (
-   OP_JOBFUNC_ID        int(16) not null auto_increment comment '²Ù×÷Ô±Ö°ÄÜID',
-   SUP_OP_JOBFUNC_ID    int(16) comment '²Ù×÷Ô±Ö°ÄÜID',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   JOBFUNC_ID           int(16) comment 'Ö°ÄÜID',
-   REAUTH_FLAG          tinyint(2) comment 'ÔÙÊÚÈ¨±êÖ¾£º0-²»ÔÊÐíÔÙÊÚÈ¨ 1-ÔÊÐíÔÙÊÚÈ¨
-            ÔÙÊÚÈ¨±êÖ¾£º0-²»ÔÊÐíÔÙÊÚÈ¨ 1-ÔÊÐíÔÙÊÚÈ¨',
-   AUTH_TYPE            tinyint(2) comment 'ÊÚÈ¨ÀàÐÍ£º1-¹ÜÀíÔ±ÊÚÈ¨ 2-²Ù×÷Ô±ÔÙÊÚÈ¨',
-   AUTH_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment 'ÊÚÈ¨ÉúÐ§Ê±¼ä',
-   AUTH_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment 'ÊÚÈ¨Ê§Ð§Ê±¼ä',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_JOBFUNC_ID        int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±Ö°ï¿½ï¿½ID',
+   SUP_OP_JOBFUNC_ID    int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±Ö°ï¿½ï¿½ID',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   JOBFUNC_ID           int(16) comment 'Ö°ï¿½ï¿½ID',
+   REAUTH_FLAG          tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½Ö¾ï¿½ï¿½0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ 1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨
+            ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½Ö¾ï¿½ï¿½0-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ 1-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨',
+   AUTH_TYPE            tinyint(2) comment 'ï¿½ï¿½È¨ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½È¨ 2-ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½È¨',
+   AUTH_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½È¨ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   AUTH_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½È¨Ê§Ð§Ê±ï¿½ï¿½',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_JOBFUNC_ID)
 )
 auto_increment = 10000
@@ -896,29 +896,29 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_JOBFUNC comment '¼ÇÂ¼ÊÚÈ¨¸ø²Ù×÷Ô±µÄÖ°ÄÜ';
+alter table SYS_OP_JOBFUNC comment 'ï¿½ï¿½Â¼ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ö°ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OP_MAPPING                                        */
 /*==============================================================*/
 create table SYS_OP_MAPPING
 (
-   OP_MAPPING_ID        int(16) not null auto_increment comment '²Ù×÷Ô±Ó³ÉäID',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   BUSI_SYS             int(6) comment 'ÒµÎñÏµÍ³£º1-CRM 2-BI 3-BOSS ',
-   EXT_OP_ID            varchar(30) comment 'ÍâÏµÍ³²Ù×÷Ô±ID',
-   EXT_OP_PASSWD        varchar(80) comment 'ÍâÏµÍ³²Ù×÷Ô±ÃÜÂë',
-   EXT_OP_DFLT_FLAG     tinyint(2) comment 'ÍâÏµÍ³¹¤ºÅÈ±Ê¡±êÖ¾£º0-·ÇÈ±Ê¡ 1-È±Ê¡',
-   EXT_SESSION_TOKEN    varchar(80) comment 'ÍâÏµÍ³½»»¥±ê¼Ç',
-   EXT_TOKEN_EFF_TIME   timestamp default '0000-00-00 00:00:00' comment 'ÍâÏµÍ³±ê¼ÇÉúÐ§Ê±¼ä',
-   EXT_TOKEN_EXP_TIME   timestamp default '0000-00-00 00:00:00' comment 'ÍâÏµÍ³±ê¼ÇÊ§Ð§Ê±¼ä',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_MAPPING_ID        int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±Ó³ï¿½ï¿½ID',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   BUSI_SYS             int(6) comment 'Òµï¿½ï¿½ÏµÍ³ï¿½ï¿½1-CRM 2-BI 3-BOSS ',
+   EXT_OP_ID            varchar(30) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   EXT_OP_PASSWD        varchar(80) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½',
+   EXT_OP_DFLT_FLAG     tinyint(2) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½È±Ê¡ï¿½ï¿½Ö¾ï¿½ï¿½0-ï¿½ï¿½È±Ê¡ 1-È±Ê¡',
+   EXT_SESSION_TOKEN    varchar(80) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   EXT_TOKEN_EFF_TIME   timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   EXT_TOKEN_EXP_TIME   timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ê§Ð§Ê±ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_MAPPING_ID)
 )
 auto_increment = 10000
@@ -929,28 +929,28 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_MAPPING comment '¼ÇÂ¼²Ù×÷Ô±ÓëÍâÏµÍ³²Ù×÷Ô±Ó³Éä¹ØÏµÊý¾Ý';
+alter table SYS_OP_MAPPING comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ô±Ó³ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½';
 
 /*==============================================================*/
 /* Table: SYS_OP_ORG_RLT                                        */
 /*==============================================================*/
 create table SYS_OP_ORG_RLT
 (
-   OP_ORG_RLT_ID        int(16) not null auto_increment comment '²Ù×÷Ô±×éÖ¯¹ØÏµID',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   ORG_ID               int(16) comment '×éÖ¯ID',
-   DIRECT_FLAG          tinyint(2) comment 'Ö±Êô±êÖ¾£º1-Ö±Êô 0-·ÇÖ±Êô',
-   ADMIN_FLAG           tinyint(2) comment '¹ÜÀíÔ±±êÖ¾£º1-ÊÇ 0-·ñ',
-   INTF_OP_TYPE         tinyint(2) comment '½Ó¿ÚÈËÀàÐÍ£º0-·Ç½Ó¿ÚÈË 1-Ä¬ÈÏ½Ó¿ÚÈË 2-±¸·Ý½Ó¿ÚÈË',
-   INTF_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment '½Ó¿ÚÈËÉúÐ§Ê±¼ä',
-   INTF_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment '½Ó¿ÚÈËÊ§Ð§Ê±¼ä',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_ORG_RLT_ID        int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ö¯ï¿½ï¿½ÏµID',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   ORG_ID               int(16) comment 'ï¿½ï¿½Ö¯ID',
+   DIRECT_FLAG          tinyint(2) comment 'Ö±ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½1-Ö±ï¿½ï¿½ 0-ï¿½ï¿½Ö±ï¿½ï¿½',
+   ADMIN_FLAG           tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ö¾ï¿½ï¿½1-ï¿½ï¿½ 0-ï¿½ï¿½',
+   INTF_OP_TYPE         tinyint(2) comment 'ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½0-ï¿½Ç½Ó¿ï¿½ï¿½ï¿½ 1-Ä¬ï¿½Ï½Ó¿ï¿½ï¿½ï¿½ 2-ï¿½ï¿½ï¿½Ý½Ó¿ï¿½ï¿½ï¿½',
+   INTF_EFF_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ê±ï¿½ï¿½',
+   INTF_EXP_DATE        timestamp default '0000-00-00 00:00:00' comment 'ï¿½Ó¿ï¿½ï¿½ï¿½Ê§Ð§Ê±ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_ORG_RLT_ID)
 )
 auto_increment = 10000
@@ -961,25 +961,25 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_ORG_RLT comment '¼ÇÂ¼²Ù×÷Ô±Óë×éÖ¯¹ØÏµÐÅÏ¢';
+alter table SYS_OP_ORG_RLT comment 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½Ïµï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_OP_ROLE                                           */
 /*==============================================================*/
 create table SYS_OP_ROLE
 (
-   OP_ROLE_ID           int(16) not null auto_increment comment '²Ù×÷Ô±½ÇÉ«ÀàÐÍID',
-   ROLE_ID              int(16) comment '½ÇÉ«ID',
-   OP_ID                int(16) comment '²Ù×÷Ô±ID',
-   OP_ROLE_DFLT_FLAG    tinyint(2) comment '²Ù×÷Ô±½ÇÉ«È±Ê¡±êÖ¾£º1-È±Ê¡ 0-·ÇÈ±Ê¡',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   OP_ROLE_ID           int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ID',
+   ROLE_ID              int(16) comment 'ï¿½ï¿½É«ID',
+   OP_ID                int(16) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ID',
+   OP_ROLE_DFLT_FLAG    tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½É«È±Ê¡ï¿½ï¿½Ö¾ï¿½ï¿½1-È±Ê¡ 0-ï¿½ï¿½È±Ê¡',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (OP_ROLE_ID)
 )
 auto_increment = 10000
@@ -990,44 +990,44 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_OP_ROLE comment '¼ÇÂ¼Ô±¹¤¾ßÓÐµÄ½ÇÉ«';
+alter table SYS_OP_ROLE comment 'ï¿½ï¿½Â¼Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ½ï¿½É«';
 
 /*==============================================================*/
 /* Table: SYS_ORG                                               */
 /*==============================================================*/
 create table SYS_ORG
 (
-   ORG_ID               int(16) not null auto_increment comment '×éÖ¯ID',
-   SUP_ORG_ID           int(16) comment '×éÖ¯ID',
-   ORG_TYPE             int(16) comment '×éÖ¯ÀàÐÍ',
-   ORG_NAME             varchar(200) comment '×éÖ¯Ãû³Æ',
-   ORG_CODE             varchar(30) comment '×éÖ¯±àÂë',
-   ORG_LEVEL            tinyint(2) comment '×éÖ¯¼¶±ð£º1-Ò»¼¶ 2-¶þ¼¶ 3-Èý¼¶ 4-ËÄ¼¶ ...',
-   ORG_LVL_PATH         varchar(400) comment '×éÖ¯²ã¼¶Â·¾¶£¨´Ó¸ù×éÖ¯IDµ½µ±Ç°×éÖ¯IDµÄÉÏÏÂ¼¶²ã¼¶Â·¾¶´®£¬ÓÃ#ºÅ·Ö¸ô£©',
-   DISTRICT_ID          varchar(40) comment 'µØÇø±àÂë',
-   SHORT_NAME           varchar(200) comment '¼ò³Æ',
-   ENGLISH_NAME         varchar(200) comment 'Ó¢ÎÄÃû',
-   MEMBER_NUM           int(6) comment 'ÈËÊý',
-   MANAGER_NAME         varchar(40) comment '¸ºÔðÈËÃû³Æ',
-   EMAIL_ADRESS         varchar(40) comment 'µç×ÓÓÊ¼þµØÖ·',
-   PHONE_ID             varchar(20) comment 'ÁªÏµµç»°',
-   FAX_ID               varchar(20) comment '´«ÕæºÅ',
-   ORG_ADDRESS          varchar(400) comment '×éÖ¯µØÖ·',
-   CONTACT_NAME         varchar(40) comment 'ÁªÏµÈËÐÕÃû',
-   CONTACT_CARD_TYPE    tinyint(2) comment 'ÁªÈËÖ¤ÀàÐÍ£º1-Éí·ÝÖ¤ 2-¾ü¹ÙÖ¤ 3-ÆäËû,¶ÔÓ¦sys_static_data±ícode_type=40108',
-   CONTACT_CARD_ID      varchar(40) comment 'ÁªÏµÈËÖ¤¼þºÅÂë',
-   CONTACT_BILL_ID      varchar(20) comment 'ÁªÏµÈËÊÖ»ú',
-   POST_PROVINCE        varchar(40) comment 'ÓÊ¼ÄÊ¡',
-   POST_CITY            varchar(40) comment 'ÓÊ¼ÄµØÊÐ',
-   POST_ADDRESS         varchar(400) comment 'Í¨ÐÅµØÖ·',
-   POSTAL_CODE          int(6) comment 'ÓÊÕþ±àÂë',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   ORG_ID               int(16) not null auto_increment comment 'ï¿½ï¿½Ö¯ID',
+   SUP_ORG_ID           int(16) comment 'ï¿½ï¿½Ö¯ID',
+   ORG_TYPE             int(16) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½',
+   ORG_NAME             varchar(200) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½',
+   ORG_CODE             varchar(30) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½',
+   ORG_LEVEL            tinyint(2) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½1-Ò»ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ 3-ï¿½ï¿½ 4-ï¿½Ä¼ï¿½ ...',
+   ORG_LVL_PATH         varchar(400) comment 'ï¿½ï¿½Ö¯ï¿½ã¼¶Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½Ö¯IDï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö¯IDï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ã¼¶Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#ï¿½Å·Ö¸ï¿½ï¿½ï¿½',
+   DISTRICT_ID          varchar(40) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   SHORT_NAME           varchar(200) comment 'ï¿½ï¿½ï¿½',
+   ENGLISH_NAME         varchar(200) comment 'Ó¢ï¿½ï¿½ï¿½ï¿½',
+   MEMBER_NUM           int(6) comment 'ï¿½ï¿½ï¿½ï¿½',
+   MANAGER_NAME         varchar(40) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   EMAIL_ADRESS         varchar(40) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ö·',
+   PHONE_ID             varchar(20) comment 'ï¿½ï¿½Ïµï¿½ç»°',
+   FAX_ID               varchar(20) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½',
+   ORG_ADDRESS          varchar(400) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½Ö·',
+   CONTACT_NAME         varchar(40) comment 'ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CONTACT_CARD_TYPE    tinyint(2) comment 'ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½Í£ï¿½1-ï¿½ï¿½ï¿½Ö¤ 2-ï¿½ï¿½ï¿½Ö¤ 3-ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ó¦sys_static_dataï¿½ï¿½code_type=40108',
+   CONTACT_CARD_ID      varchar(40) comment 'ï¿½ï¿½Ïµï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CONTACT_BILL_ID      varchar(20) comment 'ï¿½ï¿½Ïµï¿½ï¿½ï¿½Ö»ï¿½',
+   POST_PROVINCE        varchar(40) comment 'ï¿½Ê¼ï¿½Ê¡',
+   POST_CITY            varchar(40) comment 'ï¿½Ê¼Äµï¿½ï¿½ï¿½',
+   POST_ADDRESS         varchar(400) comment 'Í¨ï¿½Åµï¿½Ö·',
+   POSTAL_CODE          int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (ORG_ID)
 )
 auto_increment = 10000
@@ -1038,26 +1038,26 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_ORG comment '¼ÇÂ¼×éÖ¯»ú¹¹ÐÅÏ¢';
+alter table SYS_ORG comment 'ï¿½ï¿½Â¼ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½Ï¢';
 
 /*==============================================================*/
 /* Table: SYS_ORG_MAPPING                                       */
 /*==============================================================*/
 create table SYS_ORG_MAPPING
 (
-   ORG_MAPPING_ID       int(16) not null auto_increment comment '×éÖ¯Ó³ÉäID',
-   ORG_ID               int(16) comment '×éÖ¯ID',
-   BUSI_SYS             int(6) comment 'ÒµÎñÏµÍ³£º1-CRM 2-BI 3-BOSS ',
-   EXT_ORG_ID           varchar(30) comment 'ÍâÏµÍ³×éÖ¯ID',
-   EXT_ORG_LEVEL        tinyint(2) comment 'ÍâÏµÍ³×éÖ¯¼¶±ð£º1-Ò»¼¶ 2-¶þ¼¶ 3-Èý¼¶ 4-ËÄ¼¶ ...',
-   EXT_ORG_LVL_PATH     varchar(200) comment 'ÍâÏµÍ³×éÖ¯²ã¼¶Â·¾¶',
-   NOTES                varchar(800) comment '±¸×¢',
-   STATE                tinyint(2) comment '×´Ì¬£º1-Õý³£ 0-Í£ÓÃ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   ORG_MAPPING_ID       int(16) not null auto_increment comment 'ï¿½ï¿½Ö¯Ó³ï¿½ï¿½ID',
+   ORG_ID               int(16) comment 'ï¿½ï¿½Ö¯ID',
+   BUSI_SYS             int(6) comment 'Òµï¿½ï¿½ÏµÍ³ï¿½ï¿½1-CRM 2-BI 3-BOSS ',
+   EXT_ORG_ID           varchar(30) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ö¯ID',
+   EXT_ORG_LEVEL        tinyint(2) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½1-Ò»ï¿½ï¿½ 2-ï¿½ï¿½ï¿½ï¿½ 3-ï¿½ï¿½ 4-ï¿½Ä¼ï¿½ ...',
+   EXT_ORG_LVL_PATH     varchar(200) comment 'ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ö¯ï¿½ã¼¶Â·ï¿½ï¿½',
+   NOTES                varchar(800) comment 'ï¿½ï¿½×¢',
+   STATE                tinyint(2) comment '×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-Í£ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (ORG_MAPPING_ID)
 )
 auto_increment = 10000
@@ -1068,21 +1068,21 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_ORG_MAPPING comment '¼ÇÂ¼×éÖ¯ÓëÍâÏµÍ³×éÖ¯Ó³Éä¹ØÏµ';
+alter table SYS_ORG_MAPPING comment 'ï¿½ï¿½Â¼ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½Ö¯Ó³ï¿½ï¿½ï¿½Ïµ';
 
 /*==============================================================*/
 /* Table: SYS_ORG_TYPE                                          */
 /*==============================================================*/
 create table SYS_ORG_TYPE
 (
-   ORG_TYPE             int(16) not null auto_increment comment '×éÖ¯ÀàÐÍ',
-   ORG_TYPE_NAME        varchar(80) comment '×éÖ¯ÀàÐÍÃû³Æ',
-   ORG_TYPE_DESC        varchar(400) comment '×éÖ¯ÀàÐÍÃèÊö',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   ORG_TYPE             int(16) not null auto_increment comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½',
+   ORG_TYPE_NAME        varchar(80) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   ORG_TYPE_DESC        varchar(400) comment 'ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (ORG_TYPE)
 )
 auto_increment = 10000
@@ -1093,25 +1093,25 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_ORG_TYPE comment '¶¨Òå×éÖ¯ÀàÐÍ£¬ÈçÐÐÕþÇøÓò¡¢×éÖ¯²¿ÃÅ
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_ORG_TYPE comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¯ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_PARAM                                             */
 /*==============================================================*/
 create table SYS_PARAM
 (
-   PARAM_ID             int(16) not null auto_increment comment '²ÎÊýID',
-   PARAM_CODE           varchar(30) comment '²ÎÊý±àÂë',
-   PARAM_KIND           int(6) comment '²ÎÊý·ÖÀà',
-   PARAM_NAME           varchar(80) comment '²ÎÊýÃû³Æ',
-   PARAM_DESC           varchar(2000) comment '²ÎÊýÃèÊö',
-   PARAM_VALUE          varchar(800) comment '²ÎÊýÈ¡Öµ',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   PARAM_ID             int(16) not null auto_increment comment 'ï¿½ï¿½ï¿½ï¿½ID',
+   PARAM_CODE           varchar(30) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   PARAM_KIND           int(6) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   PARAM_NAME           varchar(80) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   PARAM_DESC           varchar(2000) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   PARAM_VALUE          varchar(800) comment 'ï¿½ï¿½ï¿½ï¿½È¡Öµ',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (PARAM_ID)
 )
 auto_increment = 10000
@@ -1122,24 +1122,24 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_PARAM comment '¶¨ÒåÏµÍ³¼¶²ÎÊýÈ¡Öµ
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_PARAM comment 'ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Öµ
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_RES                                               */
 /*==============================================================*/
 create table SYS_RES
 (
-   RES_ID               int(16) not null auto_increment comment '×ÊÔ´ID',
-   RES_NAME             varchar(80) comment '×ÊÔ´Ãû³Æ',
-   RES_DESC             varchar(400) comment '×ÊÔ´ÃèÊö',
-   SUP_RES_ID           int(16) comment 'ÉÏ¼¶×ÊÔ´ID',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   RES_ID               int(16) not null auto_increment comment 'ï¿½ï¿½Ô´ID',
+   RES_NAME             varchar(80) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ï¿½',
+   RES_DESC             varchar(400) comment 'ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½',
+   SUP_RES_ID           int(16) comment 'ï¿½Ï¼ï¿½ï¿½ï¿½Ô´ID',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (RES_ID)
 )
 auto_increment = 10000
@@ -1150,24 +1150,24 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_RES comment '¶¨ÒåÏµÍ³¹ÜÀíµÄ×ÊÔ´£¬Èç¿Í»§¡¢²úÆ·¡¢¹¤µ¥¡¢Ö¸±ê
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_RES comment 'ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 /*==============================================================*/
 /* Table: SYS_ROLE                                              */
 /*==============================================================*/
 create table SYS_ROLE
 (
-   ROLE_ID              int(16) not null auto_increment comment '½ÇÉ«ID',
-   ROLE_NAME            varchar(80) comment '½ÇÉ«Ãû³Æ',
-   ROLE_DESC            varchar(400) comment '½ÇÉ«ÃèÊö',
-   SUP_ROLE_ID          int(16) comment 'ÉÏ¼¶½ÇÉ«ID',
-   DOMAIN_ID            int(16) comment 'ÓòID',
-   DATA_STATE           tinyint(2) default 1 comment 'Êý¾Ý×´Ì¬£º1-Õý³£ 0-É¾³ý',
-   CREATOR              int(16) comment '´´½¨ÈË',
-   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment '´´½¨Ê±¼ä',
-   MODIFIER             int(16) comment 'ÐÞ¸ÄÈË',
-   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ÐÞ¸ÄÊ±¼ä',
+   ROLE_ID              int(16) not null auto_increment comment 'ï¿½ï¿½É«ID',
+   ROLE_NAME            varchar(80) comment 'ï¿½ï¿½É«ï¿½ï¿½ï¿½',
+   ROLE_DESC            varchar(400) comment 'ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½',
+   SUP_ROLE_ID          int(16) comment 'ï¿½Ï¼ï¿½ï¿½ï¿½É«ID',
+   DOMAIN_ID            int(16) comment 'ï¿½ï¿½ID',
+   DATA_STATE           tinyint(2) default 1 comment 'ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½1-ï¿½ï¿½ 0-É¾ï¿½ï¿½',
+   CREATOR              int(16) comment 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+   CREATE_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½',
+   MODIFIER             int(16) comment 'ï¿½Þ¸ï¿½ï¿½ï¿½',
+   MODIFY_DATE          timestamp default '0000-00-00 00:00:00' comment 'ï¿½Þ¸ï¿½Ê±ï¿½ï¿½',
    primary key (ROLE_ID)
 )
 auto_increment = 10000
@@ -1178,8 +1178,8 @@ engine = InnoDB
 delay_key_write = 1
 row_format = dynamic;
 
-alter table SYS_ROLE comment '¼ÇÂ¼ÏµÍ³µÄ½ÇÉ«£¬Èç¿Í»§¾­Àí¡¢Ö÷¹Ü¾­Àí¡¢ÒµÎñÖ§³ÅÈËÔ±¡¢²úÆ·¾­ÀíµÈ
-£¨¾²Ì¬Êý¾Ý±í£©';
+alter table SYS_ROLE comment 'ï¿½ï¿½Â¼ÏµÍ³ï¿½Ä½ï¿½É«ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½Ü¾ï¿½ï¿½?Òµï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½Ý±?';
 
 alter table SYS_AGENT_AUTH_FUNC add constraint FK_SYS_AGTAUTHF_R_AGTAUTH foreign key (AGENT_AUTH_ID)
       references SYS_AGENT_AUTH (AGENT_AUTH_ID) on delete restrict on update restrict;
